@@ -1,0 +1,34 @@
+.. full_cost documentation master file, created by
+   sphinx-quickstart on Thu Jan 16 22:56:43 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Full Cost's documentation!
+=====================================
+
+This is the complete documentation on how to use correctly the full cost platform and answer some (all?) of your questions!
+
+.. figure:: /images/home.png
+   :alt: home
+
+   Home page of the Full Cost website
+
+The website is divided in 4 parts namely : 1) :ref:`ref_projects`, 2) :ref:`ref_activities`, 3) :ref:`ref_billings` and
+4) :ref:`ref_administration`.
+All these and the possible actions are detailed below.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   contents/projects
+   contents/activities
+   contents/billings
+   contents/administration
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

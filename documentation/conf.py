@@ -10,19 +10,33 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import datetime
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'full_cost'
-copyright = '2020, Sebastien Weber'
-author = 'Sebastien Weber'
+year = datetime.datetime.now().year
+copyright = u'%d, Weber Sébastien' % year
+author = 'Weber Sebastien'
 
-# The full version, including alpha/beta/rc tags
-release = '1.0.0'
+# 'releases' (changelog) settings
+releases_issue_uri = "https://github.com/CEMES-CNRS/full_cost_git/issues/%s"
+releases_release_uri = "https://github.com/CEMES-CNRS/full_cost_git/tree/%s"
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
+from full_cost.version import get_version
+
+
+# Get version info
+#
+# Branch-only name
+version = get_version('branch')
+# The full human readable version, including alpha/beta/rc tags.
+release = get_version('normal')
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,10 +45,31 @@ release = '1.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.coverage',
+    'sphinx.ext.imgmath',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.githubpages',
+    'sphinx.ext.napoleon',
+    #'autoapi.sphinx',
+    'sphinx.ext.autosummary',
+
 ]
+numfig=True
+autoapi_include_summaries=True
+autodoc_member_order = "groupwise"
+autoclass_content = "class"
+autosummary_generate = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
+
+source_suffix = '.rst'
+# The master toctree document.
+master_doc = 'index'
+pygments_style = 'sphinx'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -47,9 +82,14 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
+html_static_path = ['_static']
+html_logo = 'logo_cemes.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# Output file base name for HTML help builder.
+htmlhelp_basename = 'Full Cost documentation'
