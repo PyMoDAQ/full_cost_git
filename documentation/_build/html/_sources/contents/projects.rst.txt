@@ -34,7 +34,8 @@ it to the database. You should tell her:
 * the project name
 * the project PI
 * if it is (or not) Academic, National and CNRS
-* The amount of available money for Internal Billing for the current year
+* The amount of available money for *Internal Billing* for the current year
+* Its date validity (end of the project)
 
 **NB:**
 In the case of a private company or someone external to the lab or its partners asking for an experiment or a sample,

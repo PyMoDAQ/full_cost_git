@@ -18,7 +18,7 @@ The website is divided in 4 parts namely : 1) :ref:`ref_projects`, 2) :ref:`ref
 All these and the possible actions are detailed below.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    contents/projects
