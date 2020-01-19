@@ -65,16 +65,19 @@ class RecordForm(LRecordForm):
                         css_class='form-row'
                     ),
                     Row(
-                        Column('nights', css_class='form-group col-md-4 nightcol'),
+                        Column('nights', css_class='form-group col-md-6 nightcol'),
                         Column('wu', css_class='form-group col-md-4 uocol' ),
 
                     ),
                     Row('project'),
                     Row(
-                        Column('user', css_class='form-group col-md-4'),
-                        Column('user_text_name', css_class='form-group col-md-3 usercol'),
-                        Column('user_text_surname', css_class='form-group col-md-3 usercol'),
-                        Column('group', css_class='form-group col-md-2'),
+                        Column('user', css_class='form-group col-md-6'),
+                        Column('group', css_class='form-group col-md-6'),
+                        css_class='form-row'
+                    ),
+                    Row(
+                        Column('user_text_name', css_class='form-group col-md-6 usercol'),
+                        Column('user_text_surname', css_class='form-group col-md-6 usercol'),
                         css_class='form-row'
                     ),
                     Row(

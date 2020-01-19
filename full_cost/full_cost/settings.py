@@ -29,7 +29,7 @@ DEBUG = False
 
 ADMINS = [('Seb', 'sebastien.weber@cemes.fr')]
 
-ALLOWED_HOSTS = ['10.47.3.21', '127.0.0.1', 'full-cost.cemes.fr']
+ALLOWED_HOSTS = ['10.47.3.21', '127.0.0.1', 'full-cost.cemes.fr', 'localhost']
 
 LOGIN_REDIRECT_URL = '/lab/logged/'
 

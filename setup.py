@@ -10,13 +10,13 @@ except ImportError:
     from distutils.core import setup
     from distutils.command import install
 
-from pymodaq.version import get_version
+from full_cost.version import get_version
 
 with open('README.rst') as fd:
     long_description = fd.read()
 
 setupOpts = dict(
-    name='pymodaq',
+    name='fullcost',
     description='Modular Data Acquisition with Python',
     long_description=long_description,
     license='MIT',
@@ -72,27 +72,11 @@ setup(
     packages=allPackages,
     #package_dir={'examples': 'examples'},  ## install examples along with the rest of the source
     package_data={},
-    entry_points={'console_scripts':['pymodaq_scan=pymodaq.pymodaq_exec:scan',
-                                     'pymodaq_move=pymodaq.pymodaq_exec:move',
-                                    'pymodaq_viewer=pymodaq.pymodaq_exec:viewer',
-                                    'pymodaq_h5browser=pymodaq.pymodaq_exec:h5browser'
-                                     ],
-                   'gui_scripts': ['pymodaq_scan=pymodaq.pymodaq_exec:scan',
-                                    'pymodaq_move=pymodaq.pymodaq_exec:move',
-                                    'pymodaq_viewer=pymodaq.pymodaq_exec:viewer',
-                                    'pymodaq_h5browser=pymodaq.pymodaq_exec:h5browser'
-                                    ]
-                  },
+
     install_requires = [
         'numpy',
-        'scipy',
-        'pyqtgraph==0.10',
-        'easydict',
-        #'pyqt5',
-        'tables',
-        'pymodaq_plugins>=1.2.3',
-        'pymodaq_pid_models',
-	    'simple_pid',
+        'django',
+
         ],
     include_package_data=True,
     **setupOpts
