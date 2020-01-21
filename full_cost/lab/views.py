@@ -31,13 +31,18 @@ activity_short = Path(__file__).parts[-2]
 activity_long = 'CEMES Laboratory'
 activity={'short': activity_short, 'long': activity_long}
 
+def get_logged_user(request):
+    if not isinstance(request.user, AnonymousUser):
+        return f'{request.user.last_name} {request.user.first_name}'
+    else:
+        return f'Log'
 
 class Index(View):
     activity = activity
     logged = False
     def get(self, request):
         return render(request, 'lab/index.html', {'logged': self.logged,
-                                                  'user': request.user, 'activity': self.activity, })
+                                                  'user': get_logged_user(request), 'activity': self.activity, })
 
 class FilterRecord(View):
     extract = False
@@ -52,7 +57,7 @@ class FilterRecord(View):
         RequestConfig(request).configure(table)
         return render(request, f"lab/filter_table.html",
                       {'activity': self.activity, 'filter': filter, 'table': table,
-                       'export': self.extract, 'thanks': self.thanks})
+                       'export': self.extract, 'thanks': self.thanks, 'user': get_logged_user(request)})
 
 class Projects(View):
     filter_class = ProjectFilter
@@ -64,7 +69,7 @@ class Projects(View):
         table = self.table_class(filt.qs)
         RequestConfig(request).configure(table)
         return render(request, f"lab/filter_table.html",
-                      {'activity': self.activity, 'filter': filt, 'table': table, })
+                      {'activity': self.activity, 'filter': filt, 'table': table, 'user': get_logged_user(request)})
 
 class Export(View):
     table_class = RecordTableFull
@@ -78,7 +83,7 @@ class Export(View):
             exporter = TableExport(export_format, table)
             return exporter.response(f"{self.activity['short']}.{export_format}")
         return render(request, f"{self.activity['short']}/filter_table.html",
-                      {'activity': self.activity, 'export': True})
+                      {'activity': self.activity, 'export': True, 'user': get_logged_user(request)})
 
 class GetRecord(View):
     form_class = ModelForm #to subclass by the appropriate class
@@ -87,7 +92,7 @@ class GetRecord(View):
 
     def response(self, request, form):
         return render(request, "lab/record.html",
-                  {'activity': self.activity, 'form': form})
+                  {'activity': self.activity, 'form': form, 'user': get_logged_user(request)})
 
     def validate_record(self, record, form):
         """to be subclassed"""
@@ -307,7 +312,8 @@ class ExtractRecordAll(View):
 
 
         return render(request, f"{self.activity['short']}/filter_table_lab.html",
-                    {'activity': self.activity, 'filter': filter, 'tables':tables, 'activities': activities,  'export':export})
+                    {'activity': self.activity, 'filter': filter, 'tables':tables, 'activities': activities,
+                     'export':export, 'user': f'{request.user.last_name} {request.user.first_name}'})
 
 @method_decorator(login_required, name='dispatch')
 @method_decorator(permission_required(f'lab.view_extraction', raise_exception=True), name='dispatch')
@@ -329,7 +335,7 @@ class ShowSetExtractionAll(View):
             submitting = request.user.has_perm('lab.delete_extraction')
         return render(request, "lab/filtered_extractions.html",
                       {'activity': self.activity, 'filter': filter, 'table': table, 'form': form,
-                       'thanks': thanks, 'modification': modification, 'submitting': submitting})
+                       'thanks': thanks, 'modification': modification, 'submitting': submitting, 'user': f'{request.user.last_name} {request.user.first_name}'})
 
 
     def set_as_factured(self, ext, factured=True):

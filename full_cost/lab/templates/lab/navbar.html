@@ -43,7 +43,7 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ index_url }}">Records</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item pr-5">
           <a class="nav-link" href="{{ export_url }}">Export</a>
         </li>
 
@@ -52,13 +52,7 @@
 
 
   </ul>
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="{% url "login" %}">Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url "logout" %}">Logout</a>
-    </li>
+  <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Billings
@@ -70,7 +64,17 @@
     </li>
      <li class="nav-item">
         <a class="nav-link" href="{% url  'admin:index' %}">Admin</a>
-     </li>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{user}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url "login" %}">Login</a>
+          <a class="dropdown-item" href="{% url "logout" %}">Logout</a>
+        </div>
+      </li>
+
     <li class="nav-item">
         <a class="nav-link" href="{% static "/doc/index.html"%}">?</a>
      </li>

@@ -4,7 +4,6 @@ $(document).ready(function() {
     $(".uo").css("background-color","LightGray");
     var Nunits = calculateUO();
     $(".uo").val(Nunits);
-    $(".nightcol").css("display","none");
     $(".activity_div").css("display","none");
 
     $( ".okclass" ).click(function(event) {
@@ -62,9 +61,7 @@ $(document).ready(function() {
             var tfrom = $(".tfrom").val(); //values are 'AM' or 'PM' has defined in the model field
             var tto = $(".tto").val();
             var ndays = Number(elapsed_days(new Date(dfrom),new Date(dto)));
-            var Nnights = Number($(".nights").val())
-            if (Nnights > ndays){alert("You cannot do more nights than days"); return 0;}
-            var Nunits = new Number(2*ndays + Nnights);
+            var Nunits = new Number(2*ndays);
             if (tfrom != 0){Nunits-=1;}
             if (tto == 0){Nunits-=1;}
             var exp = $("select.experiment").children("option:selected").text();

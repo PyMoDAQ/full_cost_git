@@ -58,16 +58,12 @@ class RecordForm(LRecordForm):
                     Row(
                         Column('date_from', css_class='form-group col-md-3'),
                         Column('time_from', css_class='form-group col-md-3'),
+                        Column('experiment', css_class='form-group col-6'),
                         Div(css_class='w-100'),
                         Column('date_to', css_class='form-group col-md-3'),
                         Column('time_to', css_class='form-group col-md-3'),
-                        Column('experiment', css_class='form-group col-6'),
+                        Column('wu', css_class='form-group col-md-4 uocol'),
                         css_class='form-row'
-                    ),
-                    Row(
-                        Column('nights', css_class='form-group col-md-4 nightcol'),
-                        Column('wu', css_class='form-group col-md-4 uocol' ),
-
                     ),
                     Row('project'),
                     Row(

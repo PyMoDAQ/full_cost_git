@@ -32,7 +32,7 @@ ACTIVITIES ={'osp': {'activity_short': 'osp', 'activity_long': 'Optical Spectroc
             'chem':{'activity_short': 'chem', 'activity_long': 'Chemistry','sub_billings': [('CHEM', 'Chemistry'),],
                      'related_entities': {'CHEM': 'CHEM'}},
 
-            'imag': {'activity_short': 'imag', 'activity_long': 'Local Imagery',
+            'imag': {'activity_short': 'imag', 'activity_long': 'STM/AFM',
                      'sub_billings': [('UHVI', 'UHV Imagery'),
                                       ('LT4', 'LT-UHV 4 tips'),
                                       ('NEARF', 'Near-field microscopy'),],
