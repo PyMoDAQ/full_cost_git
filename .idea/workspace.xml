@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/full_cost/osp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/osp/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,18 +23,30 @@
   </component>
   <component name="ProjectId" id="1WUnR2QIfPAmvaAkwnCuJ0RIDcK" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/full_cost" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PyMoDAQ_Git/pymodaq" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation\contents" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation\contents" />
       <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation" />
       <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\full_cost" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation\contents" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.runserver">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -87,18 +100,6 @@
         <item itemvalue="Python.manage" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
