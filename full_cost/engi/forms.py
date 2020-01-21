@@ -54,8 +54,8 @@ class RecordForm(LRecordForm):
         self.helper.layout = Layout(
                 Div(
                     Row(
-                        Column('workon', css_class='form-group col-8 uocol'),
-                        Column('finished', css_class='form-group col-4 uocol'),
+                        Column('workon', css_class='form-group col-9 uocol'),
+                        Column('finished', css_class='form-group col-3 uocol'),
                         css_class='form-row'
                     ),
                     Row(

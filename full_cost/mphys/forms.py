@@ -46,7 +46,7 @@ class RecordForm(LRecordForm):
     def __init__(self, *args, **kwargs):
         self.helper = FormHelper()
         self.help_text_inline = False
-        self.helper.form_class = 'form-inline formclass  mw-100'
+        self.helper.form_class = 'form-horizontal formclass  mw-100'
         self.helper.form_id = 'form_id'
         self.helper.form_tag = True
         self.helper.layout = Layout(
@@ -64,9 +64,12 @@ class RecordForm(LRecordForm):
                     Row('project'),
                     Row(
                         Column('user', css_class='form-group col-md-6'),
-                        Column('user_text_name', css_class='form-group col-md-3 usercol'),
-                        Column('user_text_surname', css_class='form-group col-md-3 usercol'),
-                        Column('group', css_class='form-group col-md-2'),
+                        Column('group', css_class='form-group col-md-6'),
+                        css_class='form-row'
+                    ),
+                    Row(
+                        Column('user_text_name', css_class='form-group col-md-6 usercol'),
+                        Column('user_text_surname', css_class='form-group col-md-6 usercol'),
                         css_class='form-row'
                     ),
                     Row(
