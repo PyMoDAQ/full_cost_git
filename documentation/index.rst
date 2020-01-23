@@ -31,6 +31,7 @@ All these and the possible actions are detailed below.
    contents/activities
    contents/billings
    contents/administration
+   contents/FAQ
 
 Indices and tables
 ==================

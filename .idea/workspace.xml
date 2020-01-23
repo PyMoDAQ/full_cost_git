@@ -20,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/js/imag_record.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/js/met_record.js" beforeDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,19 +37,31 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/full_cost/static/doc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/documentation/contents" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/full_cost/static/doc" />
-      <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation\contents" />
-      <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation" />
-      <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\full_cost" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation\contents" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation\contents" />
+      <recent name="$PROJECT_DIR$/full_cost/static/doc" />
+      <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation" />
+      <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\full_cost" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.runserver">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -94,26 +107,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.manage" />
       <item itemvalue="Python.runserver" />
+      <item itemvalue="Python.manage" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.manage" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
