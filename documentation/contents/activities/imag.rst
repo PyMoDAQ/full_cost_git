@@ -4,5 +4,5 @@ STM/AFM - DUF Growth
 ====================
 
 
-(In construction)
+(In construction, see the :ref:`ref_act_opt_serv` page for an example)
 
