@@ -63,7 +63,7 @@ BILLINGS = [dict(entity=('SPECTRO', 'Optical Spectroscopy'), activities=('osp',)
                      related_subbillings=[dict(short='FIBc', long='FIB Clean Room')],),
                 dict(entity=('SOFT', 'Soft Matter'), activities=('prepa',),
                      related_subbillings=[dict(short='SOFT', long='Soft Matter')],),
-                dict(entity=('MATCARAC', 'Material Caracterisation'), activities=('mphys',),
+                dict(entity=('MATCARAC', 'PS2I'), activities=('mphys',),
                       related_subbillings=[dict(short='MATC', long='Material Caracterisation')],),
                 dict(entity=('MAGNETIC', 'Magnetic Measurement'), activities=('mphys',),
                       related_subbillings=[dict(short='MAG', long='Magnetic Measurement')],),

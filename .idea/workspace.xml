@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffeee854-8eca-41ac-9d16-e47b06659cef" name="Default Changelist" comment="">
+    <list default="true" id="ffeee854-8eca-41ac-9d16-e47b06659cef" name="Default Changelist" comment="updated imag and fib validation">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/fib/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/fib/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/fib/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/fib/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/full_cost/utils/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/utils/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/imag/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/imag/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/imag/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/imag/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/imag/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/imag/tables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/imag/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/imag/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/lab/templates/lab/subhtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/lab/templates/lab/subhtml.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/met/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/met/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/met/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/met/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/met/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/met/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/prepa/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/prepa/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/static/js/imag_record.js" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/js/imag_record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/static/js/met_record.js" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/js/met_record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/js/imag_record.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/js/met_record.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,8 +80,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.manage" />
       <item itemvalue="Python.runserver" />
+      <item itemvalue="Python.manage" />
     </list>
     <recent_temporary>
       <list>
@@ -140,7 +126,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579595095143</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated imag and fib validation">
+      <created>1579797513757</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579797513757</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated imag and fib validation">
+      <created>1579797610073</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579797610073</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,7 +159,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="remove .idea from versioning" />
     <MESSAGE value="updated site aspect" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated site aspect" />
+    <MESSAGE value="updated imag and fib validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated imag and fib validation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="345" y="140" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579467891309">
@@ -167,11 +168,11 @@
     </state>
     <state x="345" y="140" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1617.922@0.0.1617.922" timestamp="1579467891309" />
     <state x="410" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.991@0.0.1920.991" timestamp="1579466973283" />
-    <state x="582" y="49" width="816" height="825" key="CommitChangelistDialog2" timestamp="1579595093927">
-      <screen x="0" y="0" width="1920" height="1111" />
+    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2" timestamp="1579816736382">
+      <screen x="0" y="0" width="1920" height="991" />
     </state>
-    <state x="582" y="49" key="CommitChangelistDialog2/0.0.1920.1111@0.0.1920.1111" timestamp="1579595093927" />
-    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1579473148236" />
+    <state x="582" y="49" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.1111@0.0.1920.1111" timestamp="1579797609238" />
+    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1579816736382" />
     <state x="736" y="251" width="442" height="489" key="FileChooserDialogImpl" timestamp="1579466948587">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
@@ -256,26 +257,31 @@
     <state width="1844" height="317" key="GridCell.Tab.1.right/0.0.1894.944@0.0.1894.944" timestamp="1579554584552" />
     <state width="1870" height="366" key="GridCell.Tab.1.right/0.0.1920.1111@0.0.1920.1111" timestamp="1579708428160" />
     <state width="1870" height="317" key="GridCell.Tab.1.right/0.0.1920.991@0.0.1920.991" timestamp="1579555399580" />
-    <state x="665" y="213" width="586" height="564" key="MultipleFileMergeDialog" timestamp="1579473203656">
-      <screen x="0" y="0" width="1920" height="991" />
+    <state x="185" y="97" width="1542" height="915" key="MergeDialog" timestamp="1579797571836">
+      <screen x="0" y="0" width="1920" height="1111" />
     </state>
+    <state x="185" y="97" width="1542" height="915" key="MergeDialog/0.0.1920.1111@0.0.1920.1111" timestamp="1579797571836" />
+    <state x="665" y="239" width="586" height="564" key="MultipleFileMergeDialog" timestamp="1579797571860">
+      <screen x="0" y="0" width="1920" height="1111" />
+    </state>
+    <state x="665" y="239" key="MultipleFileMergeDialog/0.0.1920.1111@0.0.1920.1111" timestamp="1579797571860" />
     <state x="665" y="213" width="586" height="564" key="MultipleFileMergeDialog/0.0.1920.991@0.0.1920.991" timestamp="1579473203656" />
     <state x="441" y="132" key="SettingsEditor" timestamp="1579466425045">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="441" y="132" key="SettingsEditor/0.0.1920.991@0.0.1920.991" timestamp="1579466425045" />
-    <state x="555" y="259" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579595101713">
+    <state x="555" y="259" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579797621982">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
-    <state x="555" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1111@0.0.1920.1111" timestamp="1579595101713" />
+    <state x="555" y="259" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.1111@0.0.1920.1111" timestamp="1579797621982" />
     <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1579473223725" />
     <state x="615" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1579768581822">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
     <state x="615" y="384" key="com.intellij.ide.util.TipDialog/0.0.1920.1111@0.0.1920.1111" timestamp="1579768581822" />
-    <state x="611" y="276" width="693" height="438" key="git4idea.merge.GitPullDialog" timestamp="1579473241655">
+    <state x="611" y="276" width="693" height="438" key="git4idea.merge.GitPullDialog" timestamp="1579816703549">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
-    <state x="611" y="276" width="693" height="438" key="git4idea.merge.GitPullDialog/0.0.1920.991@0.0.1920.991" timestamp="1579473241655" />
+    <state x="611" y="276" width="693" height="438" key="git4idea.merge.GitPullDialog/0.0.1920.991@0.0.1920.991" timestamp="1579816703549" />
   </component>
 </project>
