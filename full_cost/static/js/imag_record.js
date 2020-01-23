@@ -69,7 +69,8 @@ $(document).ready(function() {
             else {Nunits = ndays*2;
                 if (tfrom != 0){Nunits-=1;}
                 if (tto == 0){Nunits-=1;}}
-
+            if (exp.includes('DUF-MBE'))
+                {Nunits=1;}
 
             return Nunits;
            }
@@ -121,6 +122,13 @@ $(document).ready(function() {
 
     $("select.experiment").change(function() {
         var exp = $(this).children("option:selected").text();
+        if (exp.includes('DUF') || exp.includes('LT'))
+            {$(".time_col").css("display","none");
+             $(".tfrom").val(0);
+             $(".tto").val(1);
+             }
+        else {$(".time_col").css("display","block");}
+
         var Nunits = calculateUO();
         $(".uo").val(Nunits);
 

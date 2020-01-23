@@ -31,7 +31,8 @@ class GetRecord(GetRecord):
 
     def validate_record(self, record, form):
         records = Record.objects.filter(experiment__exact=record.experiment)
-        error = manage_time.is_date_in_date(record, records)
+        #error = manage_time.is_date_in_date(record, records)
+        error = None
         if error is not None:
             form.add_error(None, error)
         validate_state = True

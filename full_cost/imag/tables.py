@@ -1,13 +1,15 @@
 # tutorial/tables.py
 import lab.tables as tables
 from .models import Record, Extraction
-
+from .models import subexps
 Rfields = [f.name for f in Record._meta.fields]
+
+
 
 class RecordTable(tables.RecordTable):
     class Meta(tables.RecordTable.Meta):
         model = Record
-        fields = ('submitted', 'wu', 'date_from', 'project', 'group',  'user',  'experiment', 'remark')
+        fields = ('submitted', 'wu', 'date_from', 'project', 'group',  'user',  'experiment', 'subexp', 'remark')
         sequence = ('submitted', 'date_from', 'project', 'wu', '...')
 
 

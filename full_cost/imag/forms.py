@@ -2,29 +2,15 @@ from crispy_forms.bootstrap import FormActions
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Row, Column, Div, Reset, Layout, Button
 from django.forms import DateInput, Textarea, NumberInput, Select, ModelChoiceField, ChoiceField
-
+from django.core.exceptions import ValidationError
 from lab.forms import ExtractionForm as LExtractionForm
 from lab.forms import RecordForm as LRecordForm
 from .models import Record, Extraction
 from collections import OrderedDict
+from .models import subexps
 
-class ChoiceFieldnovalidate(ChoiceField):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-    def validate(self, value):
-        """Validate that the input is in self.choices."""
-        pass
 
 class RecordForm(LRecordForm):
-
-    subexps = OrderedDict([('STM/AFM', ['LT-U', 'DUF']), ('Prepa', ['LT-U', 'LT-4', 'DUF']),
-                           ('Maintenance', ['LT-U', 'DUF', 'LT-4']),
-                           ('Topo', ['LT-4']), ('Spectro', ['DUF']), ('Atom-Manipulation', ['LT-4']),
-                           ('Tunneling_measurement', ['LT-4'])])
-
-    subexp = ChoiceFieldnovalidate(choices=[(ind, k) for ind, k in enumerate(subexps.keys())], label='Usage:', widget=Select(attrs={'class': 'subexpclass',}))
-
 
     class Meta(LRecordForm.Meta):
         model = Record
@@ -32,11 +18,12 @@ class RecordForm(LRecordForm):
                   'date_to', 'time_to',
                   'user',
                   'wu',
-                  'group', 'project', 'experiment', 'remark']
+                  'group', 'project', 'experiment', 'remark', 'subexp']
 
         labels = {'wu': 'WU:', 'date_from': 'From:', 'time_from':'Time:',
                   'date_to': 'To:', 'time_to': 'Time:',
                   'experiment': 'Experiment:',
+                  'subexp': 'Usage',
 
                   }
 
@@ -55,6 +42,7 @@ class RecordForm(LRecordForm):
             'remark' : Textarea(attrs={'placeholder': 'Enter some detail here about your experiment',
                                        'rows': '1', 'cols' :'50'}),
             'experiment': Select(attrs={'class': 'experiment', }),
+            'subexp': Select(attrs={'class': 'subexpclass'}),
             'group': Select(attrs={'class': 'group', }),
             'project': Select(attrs={'class': 'project', }),
             'user' : Select(attrs = {'placeholder': 'Surname Name', 'class': 'user'}),
@@ -70,11 +58,11 @@ class RecordForm(LRecordForm):
                 Div(
                     Row(
                         Column('date_from', css_class='form-group col-md-3'),
-                        Column('time_from', css_class='form-group col-md-3'),
+                        Column('time_from', css_class='form-group col-md-3 time_col'),
                         Column('experiment', css_class='form-group col-6'),
                         Div(css_class='w-100'),
                         Column('date_to', css_class='form-group col-md-3'),
-                        Column('time_to', css_class='form-group col-md-3'),
+                        Column('time_to', css_class='form-group col-md-3 time_col'),
                         Column('wu', css_class='form-group col-md-4 uocol'),
                         css_class='form-row'
                     ),
@@ -110,10 +98,11 @@ class RecordForm(LRecordForm):
                     {'data - toggle': 'popover',
                      'data-content': help_text, 'data-placement': 'right',
                      'data-container': 'body'})
-
-    def clean_subexp(self):
-        data = self.cleaned_data['subexp']
-        if data == '':
-            return None
-        return list(self.subexps.keys())[int(data)]
+    #
+    # def clean_subexp(self):
+    #     data = self.cleaned_data['subexp']
+    #     if data == '':
+    #         return None
+    #
+    #     return int(data)
 

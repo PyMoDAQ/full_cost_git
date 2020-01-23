@@ -65,8 +65,6 @@ $(document).ready(function() {
             if (tfrom != 0){Nunits-=1;}
             if (tto == 0){Nunits-=1;}
             var exp = $("select.experiment").children("option:selected").text();
-            if (exp == 'UV (A125)' || exp == 'IR (A125)' || exp == 'Electrochimie (A125)')
-                {Nunits=$(".uo").val();}
 
             return Nunits;
            }

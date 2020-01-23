@@ -14,15 +14,12 @@ class RecordForm(LRecordForm):
         fields = ['date_from', 'time_from',
                   'date_to', 'time_to',
                   'user',
-                  'wu', 'nights',
+                  'wu',
                   'group', 'project', 'experiment', 'remark']
 
         labels = {'wu': 'WU:', 'date_from': 'From:', 'time_from':'Time:',
                   'date_to': 'To:', 'time_to': 'Time:',
                   'experiment': 'Microscope:',
-
-                  'nights': 'N nights:',
-
                   }
 
         help_texts = {'date_from': 'The starting date of your run',
@@ -45,7 +42,6 @@ class RecordForm(LRecordForm):
             'project': Select(attrs={'class': 'project', }),
             'user' : Select(attrs = {'placeholder': 'Surname Name', 'class': 'user'}),
             'wu' : NumberInput(attrs = {'required': False, 'class': 'uo', 'value': 0, 'min': 0, 'step':0.5,'style': 'width:10ch'}),
-            'nights' : NumberInput(attrs = {'class': 'nights time', 'value': 0, 'min': 0, 'step':1}),
         }
     def __init__(self, *args, **kwargs):
         self.helper = FormHelper()

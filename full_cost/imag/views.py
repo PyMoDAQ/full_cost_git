@@ -7,6 +7,7 @@ from .tables import RecordTable, RecordTableFull
 from .filters import RecordFilter
 from full_cost.utils import manage_time
 from full_cost.utils.constants import ACTIVITIES
+from .models import subexps
 #####################################################
 activity_short = Path(__file__).parts[-2]
 activity_long = ACTIVITIES[activity_short]['activity_long']
@@ -27,7 +28,6 @@ class LoadHTMLData(LoadHTMLData):
      The ajax call to this view is configured within the dedicated javascript file, see static"""
     def set_values(self, request):
         exp = request.GET.get('exp')
-        subexps = RecordForm.subexps
         values = []
         if exp is not None:
             for ind, k in enumerate(subexps.keys()):
@@ -60,8 +60,4 @@ class GetRecord(GetRecord):
             if hasattr(self.record_class, key):
                 setattr(record, key, data[key])
 
-        if data.get('subexp'):
-            remark_tmp = record.remark
-            subexp = data.get('subexp')
-            record.remark = subexp + ' / ' + remark_tmp
         return record

@@ -50,7 +50,7 @@ class GetRecord(GetRecord):
 
 
     def validate_record(self, record, form):
-        records = Record.objects.filter(experiment__exact=record.experiment, date_from=record.date_from)
+        records = Record.objects.filter(experiment__fib_name__exact=record.experiment.fib_name, date_from=record.date_from)
         error = manage_time.is_range_intersecting_session(record, records)
         if error is not None:
             form.add_error(None, error)

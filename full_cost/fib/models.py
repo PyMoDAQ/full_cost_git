@@ -24,6 +24,7 @@ class Experiment(models.Model):
     experiment = models.CharField(max_length=200)
     exp_type = models.CharField(choices=sub_billings, default=sub_billings[0][0], max_length=200)
     fib_name = models.CharField(max_length=200, choices=fibs, default=HELIOS)
+
     def __str__(self):
         return f'{self.experiment} / {self.fib_name}'
     class Meta:

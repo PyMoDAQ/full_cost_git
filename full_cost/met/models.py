@@ -23,7 +23,6 @@ class Experiment(models.Model):
 #     history = HistoricalRecords()
 
 class Record(LRecord, RecordDate, Record2Range):
-    nights = models.PositiveIntegerField(default=0)
     experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
     extraction = models.ForeignKey(Extraction, on_delete=models.SET_NULL, blank=True, null=True,
                                    related_name="%(app_label)s_%(class)s_related",
