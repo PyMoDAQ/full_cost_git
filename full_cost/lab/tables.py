@@ -11,8 +11,8 @@ field_sequence = ('submitted',
 class RecordTable(tables.Table):
     class Meta:
         template_name = "django_tables2/bootstrap.html"
-        fields = ('submitted', 'wu', 'date_from', 'date_to', 'project', 'group',  'user',  'experiment', 'remark')
-        sequence = ('submitted', 'date_from', 'date_to', 'project', 'wu', '...')
+        fields = ('id','submitted', 'wu', 'date_from', 'date_to', 'project', 'group',  'user',  'experiment', 'remark')
+        sequence = ('id','submitted', 'date_from', 'date_to', 'project', 'wu', '...')
 
 class ProjectTable(tables.Table):
     class Meta:

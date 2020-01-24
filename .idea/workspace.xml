@@ -1,12 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffeee854-8eca-41ac-9d16-e47b06659cef" name="Default Changelist" comment="updated imag and fib validation">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ffeee854-8eca-41ac-9d16-e47b06659cef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/full_cost/utils/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/utils/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/lab/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/lab/tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_images/optics.png" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_images/optics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/chemistry.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/chemistry.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/engi.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/engi.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/fib.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/fib.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/imag.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/imag.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/nanofab.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/nanofab.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/optics.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/optics.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/prepa.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/prepa.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/ps2i.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/ps2i.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/tem.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/activities/tem.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/billings.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/contents/billings.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/_sources/index.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/_sources/index.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/chemistry.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/chemistry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/engi.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/engi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/fib.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/fib.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/imag.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/imag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/nanofab.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/nanofab.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/optics.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/optics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/prepa.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/prepa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/ps2i.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/ps2i.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/tem.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/activities/tem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/contents/billings.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/contents/billings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/genindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/objects.inv" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/objects.inv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/doc/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/doc/searchindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_images/optics.png" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_images/optics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/chemistry.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/chemistry.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/engi.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/engi.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/fib.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/fib.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/imag.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/imag.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/nanofab.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/nanofab.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/optics.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/optics.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/prepa.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/prepa.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/ps2i.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/ps2i.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/tem.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/activities/tem.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/billings.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/contents/billings.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/index.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/_sources/index.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/chemistry.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/chemistry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/engi.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/engi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/fib.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/fib.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/imag.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/imag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/nanofab.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/nanofab.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/optics.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/optics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/prepa.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/prepa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/ps2i.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/ps2i.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/tem.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/activities/tem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/billings.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/contents/billings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/genindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/objects.inv" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/objects.inv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/doc/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/doc/searchindex.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,18 +92,6 @@
       <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\documentation" />
       <recent name="C:\Users\weber\Labo\Programmes Python\Git_others\full_cost_git\full_cost" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.runserver">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -141,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579797610073</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="oo">
+      <created>1579816779797</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579816779797</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,7 +212,8 @@
     <MESSAGE value="remove .idea from versioning" />
     <MESSAGE value="updated site aspect" />
     <MESSAGE value="updated imag and fib validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated imag and fib validation" />
+    <MESSAGE value="oo" />
+    <option name="LAST_COMMIT_MESSAGE" value="oo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="345" y="140" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579467891309">
@@ -169,16 +221,16 @@
     </state>
     <state x="345" y="140" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1617.922@0.0.1617.922" timestamp="1579467891309" />
     <state x="410" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.991@0.0.1920.991" timestamp="1579466973283" />
-    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2" timestamp="1579816736382">
-      <screen x="0" y="0" width="1920" height="991" />
+    <state x="582" y="49" width="816" height="825" key="CommitChangelistDialog2" timestamp="1579856166348">
+      <screen x="0" y="0" width="1920" height="1111" />
     </state>
-    <state x="582" y="49" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.1111@0.0.1920.1111" timestamp="1579797609238" />
-    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1579816736382" />
+    <state x="582" y="49" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.1111@0.0.1920.1111" timestamp="1579856166348" />
+    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1579816779255" />
     <state x="736" y="251" width="442" height="489" key="FileChooserDialogImpl" timestamp="1579466948587">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="736" y="251" width="442" height="489" key="FileChooserDialogImpl/0.0.1920.991@0.0.1920.991" timestamp="1579466948587" />
-    <state width="1870" height="366" key="GridCell.Tab.0.bottom" timestamp="1579708428156">
+    <state width="1870" height="366" key="GridCell.Tab.0.bottom" timestamp="1579855543645">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.0.bottom/0.0.1522.898@0.0.1522.898" timestamp="1579468255146" />
@@ -186,9 +238,9 @@
     <state width="1589" height="276" key="GridCell.Tab.0.bottom/0.0.1639.888@0.0.1639.888" timestamp="1579470054460" />
     <state width="1600" height="276" key="GridCell.Tab.0.bottom/0.0.1650.920@0.0.1650.920" timestamp="1579470570474" />
     <state width="1844" height="317" key="GridCell.Tab.0.bottom/0.0.1894.944@0.0.1894.944" timestamp="1579554303235" />
-    <state width="1870" height="366" key="GridCell.Tab.0.bottom/0.0.1920.1111@0.0.1920.1111" timestamp="1579708428156" />
+    <state width="1870" height="366" key="GridCell.Tab.0.bottom/0.0.1920.1111@0.0.1920.1111" timestamp="1579855543645" />
     <state width="1870" height="317" key="GridCell.Tab.0.bottom/0.0.1920.991@0.0.1920.991" timestamp="1579555399960" />
-    <state width="1870" height="366" key="GridCell.Tab.0.center" timestamp="1579708428152">
+    <state width="1870" height="366" key="GridCell.Tab.0.center" timestamp="1579855543642">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.0.center/0.0.1522.898@0.0.1522.898" timestamp="1579468255143" />
@@ -196,9 +248,9 @@
     <state width="1589" height="276" key="GridCell.Tab.0.center/0.0.1639.888@0.0.1639.888" timestamp="1579470054457" />
     <state width="1600" height="276" key="GridCell.Tab.0.center/0.0.1650.920@0.0.1650.920" timestamp="1579470570470" />
     <state width="1844" height="317" key="GridCell.Tab.0.center/0.0.1894.944@0.0.1894.944" timestamp="1579554303232" />
-    <state width="1870" height="366" key="GridCell.Tab.0.center/0.0.1920.1111@0.0.1920.1111" timestamp="1579708428152" />
+    <state width="1870" height="366" key="GridCell.Tab.0.center/0.0.1920.1111@0.0.1920.1111" timestamp="1579855543642" />
     <state width="1870" height="317" key="GridCell.Tab.0.center/0.0.1920.991@0.0.1920.991" timestamp="1579555399957" />
-    <state width="1870" height="366" key="GridCell.Tab.0.left" timestamp="1579708428151">
+    <state width="1870" height="366" key="GridCell.Tab.0.left" timestamp="1579855543641">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.0.left/0.0.1522.898@0.0.1522.898" timestamp="1579468255142" />
@@ -206,9 +258,9 @@
     <state width="1589" height="276" key="GridCell.Tab.0.left/0.0.1639.888@0.0.1639.888" timestamp="1579470054456" />
     <state width="1600" height="276" key="GridCell.Tab.0.left/0.0.1650.920@0.0.1650.920" timestamp="1579470570468" />
     <state width="1844" height="317" key="GridCell.Tab.0.left/0.0.1894.944@0.0.1894.944" timestamp="1579554303230" />
-    <state width="1870" height="366" key="GridCell.Tab.0.left/0.0.1920.1111@0.0.1920.1111" timestamp="1579708428151" />
+    <state width="1870" height="366" key="GridCell.Tab.0.left/0.0.1920.1111@0.0.1920.1111" timestamp="1579855543641" />
     <state width="1870" height="317" key="GridCell.Tab.0.left/0.0.1920.991@0.0.1920.991" timestamp="1579555399955" />
-    <state width="1870" height="366" key="GridCell.Tab.0.right" timestamp="1579708428154">
+    <state width="1870" height="366" key="GridCell.Tab.0.right" timestamp="1579855543644">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.0.right/0.0.1522.898@0.0.1522.898" timestamp="1579468255145" />
@@ -216,9 +268,9 @@
     <state width="1589" height="276" key="GridCell.Tab.0.right/0.0.1639.888@0.0.1639.888" timestamp="1579470054459" />
     <state width="1600" height="276" key="GridCell.Tab.0.right/0.0.1650.920@0.0.1650.920" timestamp="1579470570472" />
     <state width="1844" height="317" key="GridCell.Tab.0.right/0.0.1894.944@0.0.1894.944" timestamp="1579554303233" />
-    <state width="1870" height="366" key="GridCell.Tab.0.right/0.0.1920.1111@0.0.1920.1111" timestamp="1579708428154" />
+    <state width="1870" height="366" key="GridCell.Tab.0.right/0.0.1920.1111@0.0.1920.1111" timestamp="1579855543644" />
     <state width="1870" height="317" key="GridCell.Tab.0.right/0.0.1920.991@0.0.1920.991" timestamp="1579555399958" />
-    <state width="1870" height="366" key="GridCell.Tab.1.bottom" timestamp="1579708428162">
+    <state width="1870" height="366" key="GridCell.Tab.1.bottom" timestamp="1579855543435">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.1.bottom/0.0.1522.898@0.0.1522.898" timestamp="1579468252490" />
@@ -226,9 +278,9 @@
     <state width="1870" height="318" key="GridCell.Tab.1.bottom/0.0.1639.888@0.0.1639.888" timestamp="1579470053904" />
     <state width="1600" height="276" key="GridCell.Tab.1.bottom/0.0.1650.920@0.0.1650.920" timestamp="1579470570155" />
     <state width="1844" height="317" key="GridCell.Tab.1.bottom/0.0.1894.944@0.0.1894.944" timestamp="1579554584633" />
-    <state width="1870" height="366" key="GridCell.Tab.1.bottom/0.0.1920.1111@0.0.1920.1111" timestamp="1579708428162" />
+    <state width="1870" height="366" key="GridCell.Tab.1.bottom/0.0.1920.1111@0.0.1920.1111" timestamp="1579855543435" />
     <state width="1870" height="317" key="GridCell.Tab.1.bottom/0.0.1920.991@0.0.1920.991" timestamp="1579555399583" />
-    <state width="1870" height="366" key="GridCell.Tab.1.center" timestamp="1579708428159">
+    <state width="1870" height="366" key="GridCell.Tab.1.center" timestamp="1579855543434">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.1.center/0.0.1522.898@0.0.1522.898" timestamp="1579468252489" />
@@ -236,9 +288,9 @@
     <state width="1870" height="318" key="GridCell.Tab.1.center/0.0.1639.888@0.0.1639.888" timestamp="1579470053901" />
     <state width="1600" height="276" key="GridCell.Tab.1.center/0.0.1650.920@0.0.1650.920" timestamp="1579470570152" />
     <state width="1844" height="317" key="GridCell.Tab.1.center/0.0.1894.944@0.0.1894.944" timestamp="1579554584472" />
-    <state width="1870" height="366" key="GridCell.Tab.1.center/0.0.1920.1111@0.0.1920.1111" timestamp="1579708428159" />
+    <state width="1870" height="366" key="GridCell.Tab.1.center/0.0.1920.1111@0.0.1920.1111" timestamp="1579855543434" />
     <state width="1870" height="317" key="GridCell.Tab.1.center/0.0.1920.991@0.0.1920.991" timestamp="1579555399577" />
-    <state width="1870" height="366" key="GridCell.Tab.1.left" timestamp="1579708428157">
+    <state width="1870" height="366" key="GridCell.Tab.1.left" timestamp="1579855543433">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.1.left/0.0.1522.898@0.0.1522.898" timestamp="1579468252488" />
@@ -246,9 +298,9 @@
     <state width="1870" height="318" key="GridCell.Tab.1.left/0.0.1639.888@0.0.1639.888" timestamp="1579470053899" />
     <state width="1600" height="276" key="GridCell.Tab.1.left/0.0.1650.920@0.0.1650.920" timestamp="1579470570151" />
     <state width="1844" height="317" key="GridCell.Tab.1.left/0.0.1894.944@0.0.1894.944" timestamp="1579554584391" />
-    <state width="1870" height="366" key="GridCell.Tab.1.left/0.0.1920.1111@0.0.1920.1111" timestamp="1579708428157" />
+    <state width="1870" height="366" key="GridCell.Tab.1.left/0.0.1920.1111@0.0.1920.1111" timestamp="1579855543433" />
     <state width="1870" height="317" key="GridCell.Tab.1.left/0.0.1920.991@0.0.1920.991" timestamp="1579555399576" />
-    <state width="1870" height="366" key="GridCell.Tab.1.right" timestamp="1579708428160">
+    <state width="1870" height="366" key="GridCell.Tab.1.right" timestamp="1579855543435">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.1.right/0.0.1522.898@0.0.1522.898" timestamp="1579468252490" />
@@ -256,7 +308,7 @@
     <state width="1870" height="318" key="GridCell.Tab.1.right/0.0.1639.888@0.0.1639.888" timestamp="1579470053902" />
     <state width="1600" height="276" key="GridCell.Tab.1.right/0.0.1650.920@0.0.1650.920" timestamp="1579470570153" />
     <state width="1844" height="317" key="GridCell.Tab.1.right/0.0.1894.944@0.0.1894.944" timestamp="1579554584552" />
-    <state width="1870" height="366" key="GridCell.Tab.1.right/0.0.1920.1111@0.0.1920.1111" timestamp="1579708428160" />
+    <state width="1870" height="366" key="GridCell.Tab.1.right/0.0.1920.1111@0.0.1920.1111" timestamp="1579855543435" />
     <state width="1870" height="317" key="GridCell.Tab.1.right/0.0.1920.991@0.0.1920.991" timestamp="1579555399580" />
     <state x="185" y="97" width="1542" height="915" key="MergeDialog" timestamp="1579797571836">
       <screen x="0" y="0" width="1920" height="1111" />
@@ -271,15 +323,15 @@
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="441" y="132" key="SettingsEditor/0.0.1920.991@0.0.1920.991" timestamp="1579466425045" />
-    <state x="555" y="259" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579797621982">
-      <screen x="0" y="0" width="1920" height="1111" />
+    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579816796127">
+      <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="555" y="259" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.1111@0.0.1920.1111" timestamp="1579797621982" />
-    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1579473223725" />
-    <state x="615" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1579768581822">
+    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1579816796127" />
+    <state x="615" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1579855397260">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
-    <state x="615" y="384" key="com.intellij.ide.util.TipDialog/0.0.1920.1111@0.0.1920.1111" timestamp="1579768581822" />
+    <state x="615" y="384" key="com.intellij.ide.util.TipDialog/0.0.1920.1111@0.0.1920.1111" timestamp="1579855397260" />
     <state x="611" y="276" width="693" height="438" key="git4idea.merge.GitPullDialog" timestamp="1579816703549">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
