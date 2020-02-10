@@ -84,8 +84,10 @@ $(document).ready(function() {
                 {Nunits=5;}
             else if (exp.includes('Fours à Moufle') || exp.includes('Fours tubulaires') || exp.includes('Etuves'))
                 {Nunits = Math.min(Nunits, 4);}
+            else if (exp.includes('RX') || exp.includes('Radiofrequences'))
+                {Nunits = $(".uo").val();}
             else if (exp == 'PPMS')
-                {Nunits = $(".uo");}
+                {Nunits = $(".uo").val();}
 
             return Nunits;
            }
@@ -135,13 +137,16 @@ $(document).ready(function() {
 
 
         if (exp == 'PPMS')
-            {$(".uo").prop("readonly",false);
-            $(".uo").css("background-color","white");
+            {$(".uo").css("background-color","white");
             $(".uo").val(0)
             $(".timecol").css("display","none");}
-        else {$(".uo").prop("readonly",true);
-            $(".uo").css("background-color","LightGray");
+        else {$(".uo").css("background-color","LightGray");
             $(".timecol").css("display","block");}
+
+        if (exp.includes('RX') || exp.includes('Radiofrequences') || exp.includes('PPMS'))
+                {$(".uo").prop("readonly",false);}
+        else {$(".uo").prop("readonly",true);}
+
 
         });
 
