@@ -6,8 +6,9 @@ Admins make an invoice per facturation => one bill use entries possibly from var
 CNRS_PERCENTAGE = 6
 
 ACTIVITIES ={'osp': {'activity_short': 'osp', 'activity_long': 'Optical Spectrocopy Platform',
-                                            'sub_billings': [('SPEC','Optical Spectroscopy')],
-                     'related_entities': {'SPEC': 'SPECTRO'}},
+                                            'sub_billings': [('SPEC','Optical Spectroscopy'),
+                                                             ('SOFT','Soft Matter'),],
+                     'related_entities': {'SPEC': 'SPECTRO', 'PREPF': 'PREPA'}},
 
              'met': {'activity_short': 'met', 'activity_long': 'Transmission Electron Microscopy Platform',
                      'sub_billings': [('METC','Conventionnal TEM'), ('META', 'Advanced TEM')],
@@ -15,9 +16,8 @@ ACTIVITIES ={'osp': {'activity_short': 'osp', 'activity_long': 'Optical Spectroc
 
              'prepa': {'activity_short': 'prepa', 'activity_long': 'Sample Preparation Service',
                                             'sub_billings': [('PREPC','Conventionnal Preparation'),
-                                                            ('FIBp','FIB preparation'),
-                                                             ('SOFT','Soft Matter'),],
-                     'related_entities': {'PREPC': 'PREPA', 'PREPF': 'PREPA'}},
+                                                            ('FIBp','FIB preparation')],
+                     'related_entities': {'PREPC': 'PREPA',}},
 
              'fib': {'activity_short': 'fib', 'activity_long': 'Focused Ion Beam', 'sub_billings':
                                                     [('FIBp','FIB preparation'),
@@ -61,7 +61,7 @@ BILLINGS = [dict(entity=('SPECTRO', 'Optical Spectroscopy'), activities=('osp',)
                      related_subbillings=[dict(short='MEBA', long='Advanced MEB')],),
                 dict(entity=('FIBCR', 'FIB Clean Room'), activities=('fib',),
                      related_subbillings=[dict(short='FIBc', long='FIB Clean Room')],),
-                dict(entity=('SOFT', 'Soft Matter'), activities=('prepa',),
+                dict(entity=('SOFT', 'Soft Matter'), activities=('osp',),
                      related_subbillings=[dict(short='SOFT', long='Soft Matter')],),
                 dict(entity=('MATCARAC', 'PS2I'), activities=('mphys',),
                       related_subbillings=[dict(short='MATC', long='Material Caracterisation')],),

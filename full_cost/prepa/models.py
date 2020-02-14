@@ -17,7 +17,7 @@ class Experiment(models.Model):
         return '{:s}'.format(self.experiment)
 
 class Record(LRecord, RecordOneDate, Record3Range):
-    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
+    experiment = models.ForeignKey(Experiment, on_delete=models.SET_NULL, blank=True, null=True,)
     extraction = models.ForeignKey(Extraction, on_delete=models.SET_NULL, blank=True, null=True,
                                    related_name="%(app_label)s_%(class)s_related",
                                    related_query_name="%(app_label)s_%(class)ss",

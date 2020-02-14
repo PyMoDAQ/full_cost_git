@@ -69,7 +69,10 @@ def populate_releve(records_list, project, entity, show_time=True):
 
     ws.append([None])
     ws.append([None])
-    header = ['Date', 'Experiment', 'Session']
+    if entity == 'MECA' or entity == 'ELEC':
+        header = ['Date', 'Worker', 'Session']
+    else:
+        header = ['Date', 'Experiment', 'Session']
     header.extend(subbilling_long)
 
     ws.append(header)
@@ -80,13 +83,19 @@ def populate_releve(records_list, project, entity, show_time=True):
         records = records.order_by('experiment', 'date_from')
         for r in records:
             if hasattr(r, 'date_to'):
-                session = f"du {r.date_from.strftime('%d/%m/%Y')}-{r.get_time_from_display() if show_time else''} au {r.date_to.strftime('%d/%m/%Y')}-{r.get_time_to_display() if show_time else''}"
+                if hasattr(r, 'time_to'):
+                    session = f"du {r.date_from.strftime('%d/%m/%Y')}-{r.get_time_from_display() if show_time else''} au {r.date_to.strftime('%d/%m/%Y')}-{r.get_time_to_display() if show_time else''}"
+                else:
+                    session = f"du {r.date_from.strftime('%d/%m/%Y')}-{r.get_time_from_display() if show_time else ''} au {r.date_to.strftime('%d/%m/%Y')}"
             else:
-                session = f"the {r.date_from.strftime('%d/%m/%Y')}-{r.get_time_from_display() if show_time else''}"
+                if hasattr(r, 'time_to'):
+                    session = f"le {r.date_from.strftime('%d/%m/%Y')}: du {r.get_time_from_display() if show_time else ''} au {r.get_time_to_display() if show_time else''}"
+                else:
+                    session = f"le {r.date_from.strftime('%d/%m/%Y')}-{r.get_time_from_display() if show_time else''}"
 
             ind = subbilling_long.index(r.experiment.get_exp_type_display())
             wus = [r.wu if idx == ind else None for idx in range(len(subbilling_long))]
-            row = [r.date_from, r.experiment.experiment, session]
+            row = [r.date_from, str(r.experiment.experiment), session]
             row.extend(wus)
             ws.append(row)
 
