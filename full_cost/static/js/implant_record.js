@@ -9,24 +9,12 @@ $(document).ready(function() {
     $( ".okclass" ).click(function(event) {
         event.preventDefault();
         var dfrom = new Date($(".dfrom").val());
-        var dto = new Date($(".dto").val());
-        var tfrom = $(".tfrom").val(); //values are 0 or 1 has defined in the model field
-        var tto = $(".tto").val();
-
-        if (dto.getTime() < dfrom.getTime())
-            {alert("Days are not in the right order!");
-            return false;}
-
-        else if (dto.getTime() == dfrom.getTime() && tto ==0 && tfrom == 1)
-            {alert("Sessions are not in the right order!");
-            return false;}
-
         var exp = $("select.experiment").children("option:selected").text();
         var user = $("select.user").children("option:selected").text();
         var group = $("select.group").children("option:selected").text();
         var project = $("select.project").children("option:selected").text();
         var Nunits=$(".uo").val();
-        var confirm_text = "You will submit this:"+user+" from "+group+" used "+String(Nunits).bold()+" WU of "+exp+" from "+dfrom.toDateString().bold()+"/"+$(".tfrom").children("option:selected").text().bold()+" to "+dto.toDateString().bold()+"/"+$(".tto").children("option:selected").text().bold()+". The project to use is: "+project+".";
+        var confirm_text = "You will submit this:"+user+" from "+group+" used "+String(Nunits).bold()+" WU of "+exp+" the "+dfrom.toDateString().bold()+". The project to use is: "+project+".";
         confirmation(confirm_text,event)
         //var retVal = confirm(confirm_text);
         //if( retVal != true ){
@@ -55,19 +43,7 @@ $(document).ready(function() {
     function calculateUO(){
 
         try {
-            var dfrom = $(".dfrom").val();
-            var dto = $(".dto").val();
-
-            var tfrom = $(".tfrom").val(); //values are 0 or 1 has defined in the model field
-            var tto = $(".tto").val();
-            var ndays = Number(elapsed_days(new Date(dfrom),new Date(dto)));
-            var Nunits = 2*ndays;
-            if (tfrom != 0){Nunits-=1;}
-            if (tto == 0){Nunits-=1;}
-            var exp = $("select.experiment").children("option:selected").text();
-            if (exp.includes('GI'))
-                {Nunits=Math.round($(".seconds").val()/360)/10;}
-
+            Nunits=Math.round($(".seconds").val()/360)/10;
             return Nunits;
            }
         catch (error) {alert("catch triggered"+error);return 0}
@@ -82,15 +58,7 @@ $(document).ready(function() {
       return year+'-'+month+'-'+day
     };
 
-    $(".datepicker").change(function(){
-        var dfrom = new Date($(".dfrom").val());
-        var dto = new Date($(".dto").val());
-        if (dto < dfrom)
-            {alertc("Date to cannot be before Date from!");
-            $(".dto").val(dfrom.yyyymmdd());}
-    })
-
-    $(".time").change(function() {
+    $(".seconds").change(function() {
         var Nunits = calculateUO();
         $(".uo").val(Nunits);
     })
@@ -114,25 +82,6 @@ $(document).ready(function() {
             }
         });
     }
-
-    $("select.experiment").change(function() {
-        var exp = $(this).children("option:selected").text();
-        var Nunits = calculateUO();
-        $(".uo").val(Nunits);
-
-        if (exp.includes('GI'))
-            {$(".gi-col").css("display","block");
-            $(".sample").val('');}
-        else {
-            $(".gi-col").css("display","none");
-            $(".sample").val('XXX');}
-        });
-
-    $(".seconds").change(function(){
-        var Nunits = calculateUO();
-        $(".uo").val(Nunits);
-
-    });
 
     function confirmation(confirm_text, event){
     $("<div></div>").appendTo("body")

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'chem.apps.ChemConfig',
     'imag.apps.ImagConfig',
     'fab.apps.FabConfig',
+    'implant.apps.ImplantConfig',
     'engi.apps.EngiConfig',
     'django.contrib.admin',
     'django.contrib.auth',

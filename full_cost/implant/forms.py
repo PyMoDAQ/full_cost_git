@@ -1,4 +1,4 @@
-from django.forms import IntegerField, DateInput, Textarea, NumberInput, Select, CharField, ModelChoiceField, TextInput
+from django.forms import IntegerField, DateInput, TimeInput, Textarea, NumberInput, Select, CharField, ModelChoiceField, TextInput
 from .models import Record
 from lab.models import Project, User, Extraction
 from lab.forms import RecordForm as LRecordForm
@@ -12,36 +12,36 @@ class RecordForm(LRecordForm):
 
     class Meta(LRecordForm.Meta):
         model = Record
-        fields = ['date_from', 'time_from',
-                  'date_to', 'time_to',
+        fields = ['date_from',
+                  'time_from',
+                  'sample_id',
+                  'duration',
                   'user',
                   'wu',
                   'group', 'project', 'experiment', 'remark']
 
-        labels = {'wu': 'WU:', 'date_from': 'From:', 'time_from':'Time:',
-                  'date_to': 'To:', 'time_to': 'Time:',
-                  'experiment': 'Experiment:',
+        labels = {'wu': 'WU:', 'date_from': 'The:', 'time_from': 'at:', 'duration': 'Duration in s:',
+                  'experiment': 'Experiment:', 'sample_id': 'Sample  ID:'
                   }
 
         help_texts = {'date_from': 'The starting date of your run',
-                      'date_to': 'The last date of your run',
-                      'time_from': 'The first session of your run',
-                      'time_to': 'The last session of your run',
+                      'duration': 'Enter the run duration in seconds',
+                      'wu': 'Number of hours for the run calculated from the seconds and rounded to the tenth',
+                      'sample_id': 'Unique identifier of your sample',
                       'experiment': 'Pick an experiment'
                       }
 
         widgets = {
-            'date_from' : DateInput(attrs={'type':'date', 'class':'datepicker dfrom time'}),
-            'date_to' : DateInput(attrs={'type':'date', 'class':'datepicker dto time'}),
-            'time_to' : Select(attrs={'class': 'tto time'}),
-            'time_from': Select(attrs={'class': 'tfrom time'}),
-            'remark' : Textarea(attrs={'placeholder': 'Enter some detail here about your experiment',
+            'date_from': DateInput(attrs={'type':'date', 'class':'datepicker dfrom time'}),
+            'time_from': TimeInput(attrs={'type': 'time', 'class': 'timepicker dfrom time'}),
+            'duration': NumberInput(attrs={'min':0, 'step':1, 'class': 'seconds'}),
+            'remark': Textarea(attrs={'placeholder': 'Enter some detail here about your experiment',
                                        'rows': '1', 'cols' :'50'}),
             'experiment': Select(attrs={'class': 'experiment', }),
             'group': Select(attrs={'class': 'group', }),
             'project': Select(attrs={'class': 'project', }),
-            'user' : Select(attrs = {'placeholder': 'Surname Name', 'class': 'user'}),
-            'wu' : NumberInput(attrs = {'required': False, 'class': 'uo', 'value': 0, 'min': 0, 'step':0.5,'style': 'width:10ch'}),
+            'user': Select(attrs = {'placeholder': 'Surname Name', 'class': 'user'}),
+            'wu': NumberInput(attrs = {'required': False, 'class': 'uo', 'value': 0, 'min': 0, 'step':0.5,'style': 'width:10ch'}),
         }
     def __init__(self, *args, **kwargs):
         self.helper = FormHelper()
@@ -54,13 +54,16 @@ class RecordForm(LRecordForm):
                     Row(
                         Column('date_from', css_class='form-group col-md-3'),
                         Column('time_from', css_class='form-group col-md-3'),
-                        Column('wu', css_class='form-group col-md-4 uocol'),
-                        Div(css_class='w-100'),
-                        Column('date_to', css_class='form-group col-md-3'),
-                        Column('time_to', css_class='form-group col-md-3'),
-                        Column('experiment', css_class='form-group col-6'),
+                        Column('duration', css_class='form-group col-md-6 gi-col'),
                         css_class='form-row'
                     ),
+                    Row(Column('sample_id', css_class='form-group col-md-6 gi-col'),
+                        Column('wu', css_class='form-group col-md-6 uocol'),
+                        css_class='form-row'
+                    ),
+                    Row(Column('experiment', css_class='form-group col-md-6 gi-col'),
+                        css_class='form-row gi-row',
+                        ),
                     Row(Column('project', css_class='form-group col-md-8'),
                         css_class='form-row',
                     ),

@@ -64,10 +64,6 @@ $(document).ready(function() {
             var Nunits = 2*ndays;
             if (tfrom != 0){Nunits-=1;}
             if (tto == 0){Nunits-=1;}
-            var exp = $("select.experiment").children("option:selected").text();
-            if (exp.includes('GI'))
-                {Nunits=Math.round($(".seconds").val()/360)/10;}
-
             return Nunits;
            }
         catch (error) {alert("catch triggered"+error);return 0}
@@ -114,25 +110,6 @@ $(document).ready(function() {
             }
         });
     }
-
-    $("select.experiment").change(function() {
-        var exp = $(this).children("option:selected").text();
-        var Nunits = calculateUO();
-        $(".uo").val(Nunits);
-
-        if (exp.includes('GI'))
-            {$(".gi-col").css("display","block");
-            $(".sample").val('');}
-        else {
-            $(".gi-col").css("display","none");
-            $(".sample").val('XXX');}
-        });
-
-    $(".seconds").change(function(){
-        var Nunits = calculateUO();
-        $(".uo").val(Nunits);
-
-    });
 
     function confirmation(confirm_text, event){
     $("<div></div>").appendTo("body")

@@ -28,6 +28,7 @@ urlpatterns = [
     path('chem/', include('chem.urls')),
     path('imag/', include('imag.urls')),
     path('fab/', include('fab.urls')),
+    path('implant/', include('implant.urls')),
     path('engi/', include('engi.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),

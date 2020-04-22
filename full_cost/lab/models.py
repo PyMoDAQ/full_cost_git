@@ -140,8 +140,28 @@ class RecordNights(models.Model):
     class Meta:
         abstract = True
 
+class RecordDuration(models.Model):
+    duration = models.PositiveIntegerField(default=0)
+    class Meta:
+        abstract = True
+
 class RecordOneDate(models.Model):
     date_from = models.DateField(default=now)
+    class Meta:
+        abstract = True
+
+class RecordOneDateTwoTimes(models.Model):
+    date_from = models.DateField(default=now)
+    time_from = models.TimeField(default=now)
+    time_to = models.TimeField(default=now)
+    class Meta:
+        abstract = True
+
+class RecordTwoDatesTwoTimes(models.Model):
+    date_from = models.DateField(default=now)
+    date_to = models.DateField(default=now)
+    time_from = models.TimeField(default=now)
+    time_to = models.TimeField(default=now)
     class Meta:
         abstract = True
 

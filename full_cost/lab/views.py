@@ -108,6 +108,7 @@ class GetRecord(View):
             if hasattr(self.record_class, key):
                 setattr(record, key, data[key])
 
+
         return record
 
     def check_user(self, data):
