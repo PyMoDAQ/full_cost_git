@@ -82,7 +82,7 @@ BILLINGS = [dict(entity=('SPECTRO', 'Optical Spectroscopy'), activities=('osp',)
                       related_subbillings=[dict(short='DUFG', long='Growth DUF')],),
                 dict(entity=('NEARF', 'Near-field microscopy'), activities=('imag',),
                       related_subbillings=[dict(short='NEARF', long='Near-field microscopy')],),
-                dict(entity=('GROWTHIMP', 'Growth and Implantation'), activities=('fab',),
+                dict(entity=('GROWTHIMP', 'Growth and Implantation'), activities=('implant',),
                       related_subbillings=[dict(short='GROWTH', long='Growth'),
                                            dict(short='IMPLANT', long='Ionic Implantation')],),
                 dict(entity=('MECA', 'Mechanic Service'), activities=('engi',),

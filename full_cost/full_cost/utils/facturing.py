@@ -1,5 +1,6 @@
 import importlib
 import os
+import datetime
 from openpyxl import load_workbook, utils
 from django.db.models import Q
 from openpyxl.styles import Border, Side, Alignment, Font
@@ -82,16 +83,30 @@ def populate_releve(records_list, project, entity, show_time=True):
     for records in records_list:
         records = records.order_by('experiment', 'date_from')
         for r in records:
+            date_to = None
+            date_from = r.date_from.strftime('%d/%m/%Y')
+            time_to = None
+            time_from = None
+            if hasattr(r, 'time_from'):
+                if isinstance(r.time_from, datetime.time):
+                    time_from = r.time_from.strftime('%H:%M:%S')
+                else:
+                    time_from = r.get_time_from_display()
+
             if hasattr(r, 'date_to'):
-                if hasattr(r, 'time_to'):
-                    session = f"du {r.date_from.strftime('%d/%m/%Y')}-{r.get_time_from_display() if show_time else''} au {r.date_to.strftime('%d/%m/%Y')}-{r.get_time_to_display() if show_time else''}"
+                date_to = r.date_to.strftime('%d/%m/%Y')
+
+            if hasattr(r, 'time_to'):
+                if isinstance(r.time_to, datetime.time):
+                    time_to = r.time_to.strftime('%H:%M:%S')
                 else:
-                    session = f"du {r.date_from.strftime('%d/%m/%Y')}-{r.get_time_from_display() if show_time else ''} au {r.date_to.strftime('%d/%m/%Y')}"
+                    time_to = r.get_time_to_display()
+
+            if date_to is not None:
+                session = f"du {date_from}-{time_from if show_time else ''} au {date_to}-{time_to if show_time else ''}"
             else:
-                if hasattr(r, 'time_to'):
-                    session = f"le {r.date_from.strftime('%d/%m/%Y')}: du {r.get_time_from_display() if show_time else ''} au {r.get_time_to_display() if show_time else''}"
-                else:
-                    session = f"le {r.date_from.strftime('%d/%m/%Y')}-{r.get_time_from_display() if show_time else''}"
+                session = f"le {date_from}: {time_from if show_time else ''} - {time_to if show_time else ''}"
+
 
             ind = subbilling_long.index(r.experiment.get_exp_type_display())
             wus = [r.wu if idx == ind else None for idx in range(len(subbilling_long))]

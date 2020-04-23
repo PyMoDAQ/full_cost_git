@@ -29,7 +29,7 @@ class GetRecord(GetRecord):
     activity = activity
 
     def validate_record(self, record, form):
-        error = manage_time.is_range_intersecting_date_session(record, self.record_class)
+        error = manage_time.is_range_intersecting_datetime(record, self.record_class)
         if error is not None:
             form.add_error(None, error)
         validate_state = True

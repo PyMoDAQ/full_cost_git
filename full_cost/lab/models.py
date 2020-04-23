@@ -4,7 +4,7 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 from django.utils.timezone import now
 from simple_history.models import HistoricalRecords
-
+import datetime
 from full_cost.utils.constants import activities_choices, get_billing_entities_as_list
 
 activity_short = Path(__file__).parts[-2]
@@ -152,16 +152,16 @@ class RecordOneDate(models.Model):
 
 class RecordOneDateTwoTimes(models.Model):
     date_from = models.DateField(default=now)
-    time_from = models.TimeField(default=now)
-    time_to = models.TimeField(default=now)
+    time_from = models.TimeField(default=datetime.time(0, 0, 0))
+    time_to = models.TimeField(default=datetime.time(0, 0, 0))
     class Meta:
         abstract = True
 
 class RecordTwoDatesTwoTimes(models.Model):
     date_from = models.DateField(default=now)
     date_to = models.DateField(default=now)
-    time_from = models.TimeField(default=now)
-    time_to = models.TimeField(default=now)
+    time_from = models.TimeField(default=datetime.time(0, 0, 0))
+    time_to = models.TimeField(default=datetime.time(0, 0, 0))
     class Meta:
         abstract = True
 

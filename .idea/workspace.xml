@@ -2,28 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffeee854-8eca-41ac-9d16-e47b06659cef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/full_cost/fab/migrations/0004_auto_20200421_1613.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/tables.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/implant/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/full_cost/static/logo_implant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_cost/implant/migrations/0002_auto_20200421_1704.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_cost/implant/migrations/0003_auto_20200421_1711.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_cost/implant/migrations/0004_auto_20200421_1722.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_cost/implant/migrations/0005_auto_20200421_1743.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_cost/implant/migrations/0006_auto_20200422_1614.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_cost/staticfiles/js/fab_record.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_cost/staticfiles/js/implant_record.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_cost/staticfiles/logo_implant.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/fab/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/fab/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/full_cost/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/full_cost/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/full_cost/utils/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/utils/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/full_cost/utils/facturing.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/utils/facturing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/full_cost/utils/manage_time.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/utils/manage_time.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/implant/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/implant/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/lab/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/lab/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/lab/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/lab/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/static/js/fab_record.js" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/js/fab_record.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/js/fab_record.js" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/js/implant_record.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +35,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/full_cost/static" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -110,6 +104,9 @@
         <item itemvalue="Python.manage" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -185,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581948259127</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="implant app added">
+      <created>1587562065400</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587562065400</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +205,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="remove .idea from versioning" />
     <MESSAGE value="updated site aspect" />
     <MESSAGE value="updated imag and fib validation" />
@@ -208,24 +213,25 @@
     <MESSAGE value="updated mphys js file" />
     <MESSAGE value="moved soft matter to osp" />
     <MESSAGE value="all js files are now statiuc so the app can work on closed network" />
-    <option name="LAST_COMMIT_MESSAGE" value="all js files are now statiuc so the app can work on closed network" />
+    <MESSAGE value="implant app added" />
+    <option name="LAST_COMMIT_MESSAGE" value="implant app added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="345" y="140" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579467891309">
-      <screen x="0" y="0" width="1617" height="922" />
+    <state x="410" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587562775324">
+      <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="345" y="140" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1617.922@0.0.1617.922" timestamp="1579467891309" />
-    <state x="410" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.991@0.0.1920.991" timestamp="1579466973283" />
-    <state x="582" y="49" width="816" height="825" key="CommitChangelistDialog2" timestamp="1581948258384">
-      <screen x="0" y="0" width="1920" height="1111" />
+    <state x="410" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.991@0.0.1920.991" timestamp="1587562775324" />
+    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2" timestamp="1587562064192">
+      <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="582" y="49" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.1111@0.0.1920.1111" timestamp="1581948258384" />
-    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1579816779255" />
+    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1587562064192" />
     <state x="736" y="251" width="442" height="489" key="FileChooserDialogImpl" timestamp="1579466948587">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="736" y="251" width="442" height="489" key="FileChooserDialogImpl/0.0.1920.991@0.0.1920.991" timestamp="1579466948587" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1587548608489">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1587646685671">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.0.bottom/0.0.1522.898@0.0.1522.898" timestamp="1579468255146" />
@@ -234,8 +240,8 @@
     <state width="1600" height="276" key="GridCell.Tab.0.bottom/0.0.1650.920@0.0.1650.920" timestamp="1579470570474" />
     <state width="1844" height="317" key="GridCell.Tab.0.bottom/0.0.1894.944@0.0.1894.944" timestamp="1579554303235" />
     <state width="1870" height="315" key="GridCell.Tab.0.bottom/0.0.1920.1111@0.0.1920.1111" timestamp="1581948294084" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.991@0.0.1920.991" timestamp="1587548608489" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1587548608486">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.991@0.0.1920.991" timestamp="1587646685671" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1587646685667">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.0.center/0.0.1522.898@0.0.1522.898" timestamp="1579468255143" />
@@ -244,8 +250,8 @@
     <state width="1600" height="276" key="GridCell.Tab.0.center/0.0.1650.920@0.0.1650.920" timestamp="1579470570470" />
     <state width="1844" height="317" key="GridCell.Tab.0.center/0.0.1894.944@0.0.1894.944" timestamp="1579554303232" />
     <state width="1870" height="315" key="GridCell.Tab.0.center/0.0.1920.1111@0.0.1920.1111" timestamp="1581948294081" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.991@0.0.1920.991" timestamp="1587548608486" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1587548608484">
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.991@0.0.1920.991" timestamp="1587646685667" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1587646685665">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.0.left/0.0.1522.898@0.0.1522.898" timestamp="1579468255142" />
@@ -254,8 +260,8 @@
     <state width="1600" height="276" key="GridCell.Tab.0.left/0.0.1650.920@0.0.1650.920" timestamp="1579470570468" />
     <state width="1844" height="317" key="GridCell.Tab.0.left/0.0.1894.944@0.0.1894.944" timestamp="1579554303230" />
     <state width="1870" height="315" key="GridCell.Tab.0.left/0.0.1920.1111@0.0.1920.1111" timestamp="1581948294079" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.991@0.0.1920.991" timestamp="1587548608484" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1587548608488">
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.991@0.0.1920.991" timestamp="1587646685665" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1587646685669">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.0.right/0.0.1522.898@0.0.1522.898" timestamp="1579468255145" />
@@ -264,8 +270,8 @@
     <state width="1600" height="276" key="GridCell.Tab.0.right/0.0.1650.920@0.0.1650.920" timestamp="1579470570472" />
     <state width="1844" height="317" key="GridCell.Tab.0.right/0.0.1894.944@0.0.1894.944" timestamp="1579554303233" />
     <state width="1870" height="315" key="GridCell.Tab.0.right/0.0.1920.1111@0.0.1920.1111" timestamp="1581948294082" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.991@0.0.1920.991" timestamp="1587548608488" />
-    <state width="1874" height="275" key="GridCell.Tab.1.bottom" timestamp="1587548608496">
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.991@0.0.1920.991" timestamp="1587646685669" />
+    <state width="1874" height="275" key="GridCell.Tab.1.bottom" timestamp="1587646773948">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.1.bottom/0.0.1522.898@0.0.1522.898" timestamp="1579468252490" />
@@ -274,8 +280,8 @@
     <state width="1600" height="276" key="GridCell.Tab.1.bottom/0.0.1650.920@0.0.1650.920" timestamp="1579470570155" />
     <state width="1844" height="317" key="GridCell.Tab.1.bottom/0.0.1894.944@0.0.1894.944" timestamp="1579554584633" />
     <state width="1870" height="315" key="GridCell.Tab.1.bottom/0.0.1920.1111@0.0.1920.1111" timestamp="1581948294091" />
-    <state width="1874" height="275" key="GridCell.Tab.1.bottom/0.0.1920.991@0.0.1920.991" timestamp="1587548608496" />
-    <state width="1874" height="275" key="GridCell.Tab.1.center" timestamp="1587548608492">
+    <state width="1874" height="275" key="GridCell.Tab.1.bottom/0.0.1920.991@0.0.1920.991" timestamp="1587646773948" />
+    <state width="1874" height="275" key="GridCell.Tab.1.center" timestamp="1587646773823">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.1.center/0.0.1522.898@0.0.1522.898" timestamp="1579468252489" />
@@ -284,8 +290,8 @@
     <state width="1600" height="276" key="GridCell.Tab.1.center/0.0.1650.920@0.0.1650.920" timestamp="1579470570152" />
     <state width="1844" height="317" key="GridCell.Tab.1.center/0.0.1894.944@0.0.1894.944" timestamp="1579554584472" />
     <state width="1870" height="315" key="GridCell.Tab.1.center/0.0.1920.1111@0.0.1920.1111" timestamp="1581948294088" />
-    <state width="1874" height="275" key="GridCell.Tab.1.center/0.0.1920.991@0.0.1920.991" timestamp="1587548608492" />
-    <state width="1874" height="275" key="GridCell.Tab.1.left" timestamp="1587548608491">
+    <state width="1874" height="275" key="GridCell.Tab.1.center/0.0.1920.991@0.0.1920.991" timestamp="1587646773823" />
+    <state width="1874" height="275" key="GridCell.Tab.1.left" timestamp="1587646773779">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.1.left/0.0.1522.898@0.0.1522.898" timestamp="1579468252488" />
@@ -294,8 +300,8 @@
     <state width="1600" height="276" key="GridCell.Tab.1.left/0.0.1650.920@0.0.1650.920" timestamp="1579470570151" />
     <state width="1844" height="317" key="GridCell.Tab.1.left/0.0.1894.944@0.0.1894.944" timestamp="1579554584391" />
     <state width="1870" height="315" key="GridCell.Tab.1.left/0.0.1920.1111@0.0.1920.1111" timestamp="1581948294086" />
-    <state width="1874" height="275" key="GridCell.Tab.1.left/0.0.1920.991@0.0.1920.991" timestamp="1587548608491" />
-    <state width="1874" height="275" key="GridCell.Tab.1.right" timestamp="1587548608494">
+    <state width="1874" height="275" key="GridCell.Tab.1.left/0.0.1920.991@0.0.1920.991" timestamp="1587646773779" />
+    <state width="1874" height="275" key="GridCell.Tab.1.right" timestamp="1587646773880">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state width="1472" height="318" key="GridCell.Tab.1.right/0.0.1522.898@0.0.1522.898" timestamp="1579468252490" />
@@ -304,7 +310,7 @@
     <state width="1600" height="276" key="GridCell.Tab.1.right/0.0.1650.920@0.0.1650.920" timestamp="1579470570153" />
     <state width="1844" height="317" key="GridCell.Tab.1.right/0.0.1894.944@0.0.1894.944" timestamp="1579554584552" />
     <state width="1870" height="315" key="GridCell.Tab.1.right/0.0.1920.1111@0.0.1920.1111" timestamp="1581948294089" />
-    <state width="1874" height="275" key="GridCell.Tab.1.right/0.0.1920.991@0.0.1920.991" timestamp="1587548608494" />
+    <state width="1874" height="275" key="GridCell.Tab.1.right/0.0.1920.991@0.0.1920.991" timestamp="1587646773880" />
     <state x="185" y="97" width="1542" height="915" key="MergeDialog" timestamp="1579797571836">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
@@ -318,11 +324,11 @@
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="441" y="132" key="SettingsEditor/0.0.1920.991@0.0.1920.991" timestamp="1587476396974" />
-    <state x="555" y="259" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1581948266652">
-      <screen x="0" y="0" width="1920" height="1111" />
+    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1587562069692">
+      <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="555" y="259" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.1111@0.0.1920.1111" timestamp="1581948266652" />
-    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1579816796127" />
+    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1587562069692" />
     <state x="615" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1581946912878">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
@@ -337,9 +343,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/full_cost/implant/views.py</url>
-          <line>46</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/full_cost/lab/views.py</url>
+          <line>309</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
