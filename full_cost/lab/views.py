@@ -367,8 +367,10 @@ class ShowSetExtractionAll(View):
         project = ext.project
         pi = ext.project.project_pi
         ldap = LDAP()
-        email_pi = ldap.get_user_info_last_name(pi.user_last_name)['mail'][0].decode()
-
+        try:
+            email_pi = ldap.get_user_info_last_name(pi.user_last_name)['mail'][0].decode()
+        except:
+            email_pi = 'unknown.pi@cemes.fr'
         ext.submitted = True
         ext.save()
 
