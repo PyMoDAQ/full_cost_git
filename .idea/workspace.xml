@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffeee854-8eca-41ac-9d16-e47b06659cef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/full_cost/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/lab/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/lab/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +82,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.runserver" />
       <item itemvalue="Python.manage" />
+      <item itemvalue="Python.runserver" />
     </list>
     <recent_temporary>
       <list>
@@ -184,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587646879050</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="bug check for email not found from the ldap base">
+      <created>1590583912799</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1590583912799</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,18 +215,19 @@
     <MESSAGE value="all js files are now statiuc so the app can work on closed network" />
     <MESSAGE value="implant app added" />
     <MESSAGE value="tested implant app" />
-    <option name="LAST_COMMIT_MESSAGE" value="tested implant app" />
+    <MESSAGE value="bug check for email not found from the ldap base" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug check for email not found from the ldap base" />
   </component>
   <component name="WindowStateProjectService">
     <state x="410" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587562775324">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="410" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.991@0.0.1920.991" timestamp="1587562775324" />
-    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2" timestamp="1587646878115">
+    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2" timestamp="1590583911979">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="582" y="49" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.1111@0.0.1920.1111" timestamp="1581948258384" />
-    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1587646878115" />
+    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1590583911979" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1590583253253">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
@@ -266,11 +272,11 @@
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="441" y="132" key="SettingsEditor/0.0.1920.991@0.0.1920.991" timestamp="1587476396974" />
-    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1587646885563">
+    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590583917941">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="555" y="259" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.1111@0.0.1920.1111" timestamp="1581948266652" />
-    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1587646885563" />
+    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1590583917941" />
     <state x="615" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1581946912878">
       <screen x="0" y="0" width="1920" height="1111" />
     </state>
@@ -287,11 +293,6 @@
           <url>file://$PROJECT_DIR$/full_cost/lab/views.py</url>
           <line>309</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/full_cost/lab/views.py</url>
-          <line>395</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/full_cost/lab/views.py</url>
