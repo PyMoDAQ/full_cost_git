@@ -14,6 +14,13 @@
         <hr class="mt-0 mb-4">
     {% endif %}
 
+    {% if not email_status %}
+        <p>Votre facture a été enregistrée et validée mais son envoi par email a échoué...(les voies de l'informatique
+        sont impénétrables parfois ;-). Merci de la télécharger et de l'envoyer directement à gestionnaires@cemes.fr
+        pour facturation.</p>
+        <hr class="mt-0 mb-4">
+    {% endif %}
+
     {% include 'lab/form_errors.html' %}
     <form action="" method="POST" class="form form-inline formext">
         {% csrf_token %}

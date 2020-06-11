@@ -324,7 +324,7 @@ class ShowSetExtractionAll(View):
     table_class = ExtractionTable
     activity = activity
 
-    def response(self, request, table, form, filter, thanks='', ext=None):
+    def response(self, request, table, form, filter, thanks='', ext=None, email_status=True):
         if thanks == '':
             thanks = False
         else:
@@ -336,7 +336,9 @@ class ShowSetExtractionAll(View):
             submitting = request.user.has_perm('lab.delete_extraction')
         return render(request, "lab/filtered_extractions.html",
                       {'activity': self.activity, 'filter': filter, 'table': table, 'form': form,
-                       'thanks': thanks, 'modification': modification, 'submitting': submitting, 'user': f'{request.user.last_name} {request.user.first_name}'})
+                       'thanks': thanks, 'modification': modification, 'submitting': submitting,
+                       'user': f'{request.user.last_name} {request.user.first_name}',
+                       'email_status': email_status})
 
 
     def set_as_factured(self, ext, factured=True):
@@ -376,7 +378,7 @@ class ShowSetExtractionAll(View):
 
         try:
             # send email to admin
-            mail.send([settings.EMAIL_FROM_EMAIL, 'gestionnaires@cemes.fr', email_pi],
+            mail.send([settings.EMAIL_FROM_EMAIL, 'gestionnaires@cemes.fr', 'sebastien.weber@cemes.fr', email_pi],
                       email_pi,
                       subject='FULL cost: An extraction has been submitted',
                       message=(f'Hello,\nThe extraction {ext.billing}-{ext.creation_id:03d} has been made on the project: '
@@ -389,8 +391,9 @@ class ShowSetExtractionAll(View):
                                ),
                       priority='now',
                       )
+            return True
         except:
-            pass
+            return False
 
     def post(self, request, entity=None, id=-1, thanks=''):
         form = self.form_class(request.POST)
@@ -410,13 +413,13 @@ class ShowSetExtractionAll(View):
                 self.delete(ext)
 
             elif 'submit' in request.POST:
-                self.submit(ext, request.user)
+                status = self.submit(ext, request.user)
 
         filter = self.filter_class(request.GET)  # get all objects from the filter model
         table = self.table_class(filter.qs)
         RequestConfig(request).configure(table)
 
-        return self.response(request, table, form, filter, ext=ext)
+        return self.response(request, table, form, filter, ext=ext, email_status=status)
 
     def get(self, request, entity=None, id=-1, thanks=''):
         filter = self.filter_class(request.GET)  # get all objects from the filter model
