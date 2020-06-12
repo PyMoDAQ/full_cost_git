@@ -378,7 +378,7 @@ class ShowSetExtractionAll(View):
 
         try:
             # send email to admin
-            mail.send([settings.EMAIL_FROM_EMAIL, 'gestionnaires@cemes.fr', 'sebastien.weber@cemes.fr', email_pi],
+            mail.send(['fullcost@new-sympa.cemes.fr', email_pi],
                       email_pi,
                       subject='FULL cost: An extraction has been submitted',
                       message=(f'Hello,\nThe extraction {ext.billing}-{ext.creation_id:03d} has been made on the project: '

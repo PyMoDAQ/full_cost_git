@@ -4,7 +4,6 @@
     <list default="true" id="ffeee854-8eca-41ac-9d16-e47b06659cef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/full_cost/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full_cost/lab/templates/lab/filtered_extractions.html" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/lab/templates/lab/filtered_extractions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/lab/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/lab/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591097218657</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added email status in html response if some problem append">
+      <created>1591867895058</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1591867895058</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,18 +242,19 @@
     <MESSAGE value="tested implant app" />
     <MESSAGE value="bug check for email not found from the ldap base" />
     <MESSAGE value="changed email object" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed email object" />
+    <MESSAGE value="added email status in html response if some problem append" />
+    <option name="LAST_COMMIT_MESSAGE" value="added email status in html response if some problem append" />
   </component>
   <component name="WindowStateProjectService">
     <state x="410" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587562775324">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="410" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.991@0.0.1920.991" timestamp="1587562775324" />
-    <state x="550" y="93" width="816" height="825" key="CommitChangelistDialog2" timestamp="1591097218122">
-      <screen x="0" y="0" width="1920" height="1111" />
+    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2" timestamp="1591867893739">
+      <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="550" y="93" key="CommitChangelistDialog2/0.0.1920.1111@0.0.1920.1111" timestamp="1591097218122" />
-    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1590583911979" />
+    <state x="550" y="83" width="816" height="825" key="CommitChangelistDialog2/0.0.1920.991@0.0.1920.991" timestamp="1591867893739" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1591867721836">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
@@ -284,11 +291,11 @@
       <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="441" y="132" key="SettingsEditor/0.0.1920.991@0.0.1920.991" timestamp="1587476396974" />
-    <state x="555" y="259" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1591097223105">
-      <screen x="0" y="0" width="1920" height="1111" />
+    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2" timestamp="1591867898230">
+      <screen x="0" y="0" width="1920" height="991" />
     </state>
     <state x="555" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1111@0.0.1920.1111" timestamp="1591097223105" />
-    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1590583917941" />
+    <state x="555" y="231" width="806" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.991@0.0.1920.991" timestamp="1591867898230" />
     <state x="611" y="276" width="693" height="438" key="git4idea.merge.GitPullDialog" timestamp="1587476835583">
       <screen x="0" y="0" width="1920" height="991" />
     </state>
