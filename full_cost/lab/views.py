@@ -397,6 +397,7 @@ class ShowSetExtractionAll(View):
 
     def post(self, request, entity=None, id=-1, thanks=''):
         form = self.form_class(request.POST)
+        status = True
         if form.is_valid():
             ext = form.cleaned_data['extractions']
             if 'factured' in request.POST:
