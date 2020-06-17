@@ -7,8 +7,8 @@ Rfields = [f.name for f in Record._meta.fields]
 class RecordTable(tables.RecordTable):
     class Meta(tables.RecordTable.Meta):
         model = Record
-        fields = ('submitted', 'wu', 'date_from', 'project', 'group',  'user',  'experiment', 'remark')
-        sequence = ('submitted', 'date_from', 'project', 'wu', '...')
+        fields = ('id', 'submitted', 'wu', 'date_from', 'project', 'group',  'user',  'experiment', 'remark')
+        sequence = ('id', 'date_from', 'project', 'wu', '...','submitted')
 
 
 class RecordTableFull(tables.RecordTableFull):

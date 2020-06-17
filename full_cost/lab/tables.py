@@ -1,18 +1,17 @@
 import django_tables2 as tables
 from lab.models import Project, Extraction
 
-field_sequence = ('submitted',
-                  'date_from', 'time_from',
+field_sequence = ('date_from', 'time_from',
                   'date_to', 'time_to',
                   'project', 'wu', 'nights',
                   'user', 'group',
-                  'experiment', 'remark', 'factured')
+                  'experiment', 'remark', 'factured', 'submitted',)
 
 class RecordTable(tables.Table):
     class Meta:
         template_name = "django_tables2/bootstrap.html"
-        fields = ('id','submitted', 'wu', 'date_from', 'date_to', 'project', 'group',  'user',  'experiment', 'remark')
-        sequence = ('id','submitted', 'date_from', 'date_to', 'project', 'wu', '...')
+        fields = ('id', 'submitted', 'wu', 'date_from', 'date_to', 'project', 'group',  'user',  'experiment', 'remark')
+        sequence = ('id', 'date_from', 'date_to', 'project', 'wu', '...', 'submitted')
 
 class ProjectTable(tables.Table):
     class Meta:
