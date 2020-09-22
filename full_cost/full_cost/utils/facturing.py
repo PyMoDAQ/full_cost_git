@@ -246,6 +246,7 @@ def generate_xlsx(extraction):
     return response
 
 
+
 def create_extraction(entity, records_list, project, filter):
     ext_id = Extraction.objects.all().filter(creation_date__year=date.today().year).aggregate(Max('creation_id'))['creation_id__max']
     if ext_id is not None:

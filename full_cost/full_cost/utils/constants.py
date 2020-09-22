@@ -77,7 +77,7 @@ BILLINGS = [dict(entity=('SPECTRO', 'Optical Spectroscopy'), activities=('osp',)
                 dict(entity=('UHVI', 'UHV Imagery'), activities=('imag',),
                       related_subbillings=[dict(short='UHVI', long='UHV Imagery')],),
                 dict(entity=('LT4', 'LT-UHV 4 tips'), activities=('imag',),
-                      related_subbillings=[dict(short='LT4', long='STM 4tips')],),
+                      related_subbillings=[dict(short='LT4', long='LT-UHV 4 tips')],),
                 dict(entity=('DUFG', 'Growth DUF'), activities=('imag',),
                       related_subbillings=[dict(short='DUFG', long='Growth DUF')],),
                 dict(entity=('NEARF', 'Near-field microscopy'), activities=('imag',),

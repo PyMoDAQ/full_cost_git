@@ -24,6 +24,7 @@ from lab.tables import ProjectTable, RecordTableFull, ExtractionTable, RecordTab
 from lab.forms import ExtractionForm
 from full_cost.utils.constants import ACTIVITIES, BILLINGS, get_activities_from_entity, get_subbillings_from_entity_short
 from full_cost.utils.ldap import LDAP
+from full_cost.utils.facturing import calculate_totals
 from full_cost.utils.url_stuff import get_field_from_url
 from .models import Record, Group
 
@@ -284,6 +285,7 @@ class ExtractRecordAll(View):
             RequestConfig(request).configure(tables[-1])
 
         export = False
+        amount = -1
         if filter.form.is_valid() and len(request.GET) != 0:
             if 'project' not in request.GET:
                 filter.form.add_error('project', ValidationError(('Pick one project to extract from'), code='project_error'))
@@ -300,21 +302,18 @@ class ExtractRecordAll(View):
                 filter.form.add_error('date_from', ValidationError(('Select dates to extract from'), code='date_error'))
 
             if filter.form.is_valid():
-                export = True
-
-            if filter.form.is_valid() and '_export' in request.GET:
-
-
-
                 project = filter.form.cleaned_data['project']
-                ext = create_extraction(entity, qss, project, filter)
+                export = True
+                amount = calculate_totals(project, qss, entity)[0]
 
-                return redirect('lab:fextract_entity_id', entity=entity, id=ext.creation_id, thanks='true')
+                if '_export' in request.GET:
+                    ext = create_extraction(entity, qss, project, filter)
+                    return redirect('lab:fextract_entity_id', entity=entity, id=ext.creation_id, thanks='true')
 
 
         return render(request, f"{self.activity['short']}/filter_table_lab.html",
                     {'activity': self.activity, 'filter': filter, 'tables':tables, 'activities': activities,
-                     'export':export, 'user': f'{request.user.last_name} {request.user.first_name}'})
+                     'export':export, 'user': f'{request.user.last_name} {request.user.first_name}', 'amount': amount})
 
 @method_decorator(login_required, name='dispatch')
 @method_decorator(permission_required(f'lab.view_extraction', raise_exception=True), name='dispatch')

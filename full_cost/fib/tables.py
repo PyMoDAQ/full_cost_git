@@ -8,7 +8,7 @@ class RecordTable(tables.RecordTable):
     class Meta(tables.RecordTable.Meta):
         model = Record
         fields = ('id', 'submitted', 'wu', 'date_from', 'project', 'group',  'user',  'experiment', 'remark')
-        sequence = ('id', 'date_from', 'project', 'wu', '...','submitted')
+        sequence = ('id', 'date_from', 'project', 'wu', '...', 'submitted')
 
 
 class RecordTableFull(tables.RecordTableFull):
