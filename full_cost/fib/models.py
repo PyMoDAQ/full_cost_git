@@ -5,7 +5,7 @@ from full_cost.utils.constants import ACTIVITIES
 
 from lab.models import Record as LRecord
 from lab.models import Extraction
-from lab.models import Record3Range, RecordOneDate
+from lab.models import Record3Range, RecordOneDate, Record4RangeNight
 from simple_history.models import HistoricalRecords
 
 activity_short = Path(__file__).parts[-2]
@@ -32,7 +32,7 @@ class Experiment(models.Model):
 # class Extraction(Extraction):
 #     history = HistoricalRecords()
 
-class Record(LRecord, RecordOneDate, Record3Range):
+class Record(LRecord, RecordOneDate, Record4RangeNight):
     experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
     extraction = models.ForeignKey(Extraction, on_delete=models.SET_NULL, blank=True, null=True,
                                    related_name="%(app_label)s_%(class)s_related",

@@ -197,6 +197,21 @@ class Record3Range(models.Model):
     class Meta:
         abstract = True
 
+class Record4RangeNight(models.Model):
+    AM = 0
+    PM = 1
+    EV = 2
+    NI = 3
+    date_choices = [(AM, 'Morning'),
+                    (PM, 'Afternoon'),
+                    (EV, 'Evening'),
+                    (NI, 'Night')]
+
+    time_from = models.SmallIntegerField(choices=date_choices, default=AM,)
+    time_to= models.SmallIntegerField(choices=date_choices, default=AM,)
+    class Meta:
+        abstract = True
+
 class Record4Range(models.Model):
     AM1 = 0
     AM2 = 1
@@ -208,7 +223,7 @@ class Record4Range(models.Model):
                     (PM2, '16h-18h')]
 
     time_from = models.SmallIntegerField(choices=date_choices, default=AM1,)
-    time_to= models.SmallIntegerField(choices=date_choices, default=AM1,)
+    time_to = models.SmallIntegerField(choices=date_choices, default=AM1,)
     class Meta:
         abstract = True
 

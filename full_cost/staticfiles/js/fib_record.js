@@ -52,7 +52,10 @@ $(document).ready(function() {
         var group = $("select.group").children("option:selected").text();
         var project = $("select.project").children("option:selected").text();
         var Nunits=$(".uo").val();
-        var confirm_text = "You will submit this:"+user+" from "+group+" used "+String(Nunits).bold()+" WU of "+exp+" from "+dfrom.toDateString().bold()+"/"+$(".tfrom").children("option:selected").text().bold()+" to "+dto.toDateString().bold()+"/"+$(".tto").children("option:selected").text().bold()+". The project to use is: "+project+".";
+        var confirm_text = "You will submit this:"+user+" from "+group+" used "+String(Nunits).bold()+
+        " WU of "+exp+" from "+dfrom.toDateString().bold()+"/"+$(".tfrom").children("option:selected").text().bold()+
+        " to "+dfrom.toDateString().bold()+"/"+$(".tto").children("option:selected").text().bold()+
+        ". The project to use is: "+project+".";
         confirmation(confirm_text,event)
         //var retVal = confirm(confirm_text);
         //if( retVal != true ){
