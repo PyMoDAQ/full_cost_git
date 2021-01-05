@@ -13,6 +13,7 @@ class RecordForm(LRecordForm):
     class Meta(LRecordForm.Meta):
         model = Record
         fields = ['date_from',
+                  'date_to',
                   'time_from',
                   'sample_id',
                   'duration',
@@ -20,11 +21,12 @@ class RecordForm(LRecordForm):
                   'wu',
                   'group', 'project', 'experiment', 'remark']
 
-        labels = {'wu': 'WU:', 'date_from': 'The:', 'time_from': 'at:', 'duration': 'Duration in s:',
-                  'experiment': 'Experiment:', 'sample_id': 'Sample  ID:'
+        labels = {'wu': 'WU:', 'date_from': 'starting at:', 'time_from': 'at:', 'duration': 'Duration in s:',
+                  'date_to': 'to:', 'experiment': 'Experiment:', 'sample_id': 'Sample  ID:'
                   }
 
         help_texts = {'date_from': 'The starting date of your run',
+                      'date_to': 'The end date of your run',
                       'duration': 'Enter the run duration in seconds',
                       'wu': 'Number of hours for the run calculated from the seconds and rounded to the tenth',
                       'sample_id': 'Unique identifier of your sample',
@@ -32,8 +34,9 @@ class RecordForm(LRecordForm):
                       }
 
         widgets = {
-            'date_from': DateInput(attrs={'type':'date', 'class':'datepicker dfrom time'}),
-            'time_from': TimeInput(attrs={'type': 'time', 'class': 'timepicker dfrom time'}),
+            'date_from': DateInput(attrs={'type':'date', 'class': 'datepicker dfrom time'}),
+            'date_to': DateInput(attrs={'type': 'date', 'class': 'datepicker dto time'}),
+            'time_from': TimeInput(attrs={'type': 'time', 'class': 'timepicker tfrom time'}),
             'duration': NumberInput(attrs={'min':0, 'step':1, 'class': 'seconds'}),
             'remark': Textarea(attrs={'placeholder': 'Enter some detail here about your experiment',
                                        'rows': '1', 'cols' :'50'}),
@@ -52,16 +55,20 @@ class RecordForm(LRecordForm):
         self.helper.layout = Layout(
                 Div(
                     Row(
-                        Column('date_from', css_class='form-group col-md-3'),
-                        Column('time_from', css_class='form-group col-md-3'),
-                        Column('duration', css_class='form-group col-md-6 gi-col'),
+                        Column('date_from', css_class='form-group col-md-6'),
+                        Column('time_from', css_class='form-group col-md-6'),
+                        css_class='form-row'
+                    ),
+                    Row(
+                        Column('duration', css_class='form-group col-md-6 gi-col durationcol'),
+                        Column('date_to', css_class='form-group col-md-6 dtocol'),
                         css_class='form-row'
                     ),
                     Row(Column('sample_id', css_class='form-group col-md-6 gi-col'),
                         Column('wu', css_class='form-group col-md-6 uocol'),
                         css_class='form-row'
                     ),
-                    Row(Column('experiment', css_class='form-group col-md-6 gi-col'),
+                    Row(Column('experiment', css_class='form-group col-md-6 gi-col exp'),
                         css_class='form-row gi-row',
                         ),
                     Row(Column('project', css_class='form-group col-md-8'),
