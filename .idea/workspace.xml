@@ -3,9 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ffeee854-8eca-41ac-9d16-e47b06659cef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/full_cost/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/implant/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/implant/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/lab/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/lab/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/static/js/implant_record.js" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/js/implant_record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/logo_CNRS.png" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/logo_CNRS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/logo_cemes.png" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/logo_cemes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/static/logo_lab.png" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/static/logo_lab.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/js/implant_record.js" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/js/implant_record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/logo_CNRS.png" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/logo_CNRS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/logo_cemes.png" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/logo_cemes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/logo_lab.png" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/logo_lab.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1WUnR2QIfPAmvaAkwnCuJ0RIDcK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -35,7 +46,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/full_cost/static" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -248,7 +259,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604311959295</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="updated javascript for implantation and added the field dto">
+      <created>1609850650021</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609850650021</updated>
+    </task>
+    <task id="LOCAL-00021" summary="updated javascript for implantation and added the field dto">
+      <created>1627992195887</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1627992195887</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +286,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -282,7 +306,8 @@
     <MESSAGE value="updated tables layout (submited field last on the table)" />
     <MESSAGE value="corrected bugs on the STM activity&#10;Added the amount associated with a given potential extraction" />
     <MESSAGE value="Added a fourth session on FIB activities (Helios) created a Model named Record4RangeNights made a migration of the fib records." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a fourth session on FIB activities (Helios) created a Model named Record4RangeNights made a migration of the fib records." />
+    <MESSAGE value="updated javascript for implantation and added the field dto" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated javascript for implantation and added the field dto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -296,6 +321,11 @@
           <url>file://$PROJECT_DIR$/full_cost/full_cost/utils/facturing.py</url>
           <line>79</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/full_cost/lab/filters.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

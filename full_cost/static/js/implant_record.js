@@ -1,20 +1,10 @@
 $(document).ready(function() {
     $(".uo").prop("readonly",true);
     $(".uo").css("background-color","LightGray");
-    $(".durationcol").css("display","none");
+    $(".durationcol").css("display","block");
     var Nunits = calculateUO();
     $(".uo").val(Nunits);
 
-    $("select.experiment").change(function () {
-          var exp = $("select.experiment").children("option:selected").text();
-          if (exp.includes("Four"))
-            {$(".dtocol").css("display","block");
-            $(".durationcol").css("display","none");}
-          else {$(".dtocol").css("display","none");
-            $(".dto").val($(".dfrom").val())
-            $(".durationcol").css("display","block");
-            $(".seconds").val(0)}
-        });
 
     $( ".okclass" ).click(function(event) {
         event.preventDefault();
@@ -55,9 +45,7 @@ $(document).ready(function() {
         try {
             var exp = $("select.experiment").children("option:selected").text();
             if (exp.includes("Four"))
-                {var dfrom = new Date($(".dfrom").val());
-                 var dto = new Date($(".dto").val());
-                Nunits=elapsed_days(dfrom, dto);}
+                {Nunits=Math.ceil($(".seconds").val()/(3600*24));}
             else {Nunits=Math.round($(".seconds").val()/360)/10;}
             return Nunits;
            }

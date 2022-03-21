@@ -13,7 +13,7 @@ class RecordForm(LRecordForm):
     class Meta(LRecordForm.Meta):
         model = Record
         fields = ['date_from',
-                  'date_to',
+                  #'date_to',
                   'time_from',
                   'sample_id',
                   'duration',
@@ -22,11 +22,12 @@ class RecordForm(LRecordForm):
                   'group', 'project', 'experiment', 'remark']
 
         labels = {'wu': 'WU:', 'date_from': 'starting at:', 'time_from': 'at:', 'duration': 'Duration in s:',
-                  'date_to': 'to:', 'experiment': 'Experiment:', 'sample_id': 'Sample  ID:'
+                  #'date_to': 'to:',
+                  'experiment': 'Experiment:', 'sample_id': 'Sample  ID:'
                   }
 
         help_texts = {'date_from': 'The starting date of your run',
-                      'date_to': 'The end date of your run',
+                      #'date_to': 'The end date of your run',
                       'duration': 'Enter the run duration in seconds',
                       'wu': 'Number of hours for the run calculated from the seconds and rounded to the tenth',
                       'sample_id': 'Unique identifier of your sample',
@@ -35,7 +36,7 @@ class RecordForm(LRecordForm):
 
         widgets = {
             'date_from': DateInput(attrs={'type':'date', 'class': 'datepicker dfrom time'}),
-            'date_to': DateInput(attrs={'type': 'date', 'class': 'datepicker dto time'}),
+            #'date_to': DateInput(attrs={'type': 'date', 'class': 'datepicker dto time'}),
             'time_from': TimeInput(attrs={'type': 'time', 'class': 'timepicker tfrom time'}),
             'duration': NumberInput(attrs={'min':0, 'step':1, 'class': 'seconds'}),
             'remark': Textarea(attrs={'placeholder': 'Enter some detail here about your experiment',
@@ -61,7 +62,7 @@ class RecordForm(LRecordForm):
                     ),
                     Row(
                         Column('duration', css_class='form-group col-md-6 gi-col durationcol'),
-                        Column('date_to', css_class='form-group col-md-6 dtocol'),
+                        #Column('date_to', css_class='form-group col-md-6 dtocol'),
                         css_class='form-row'
                     ),
                     Row(Column('sample_id', css_class='form-group col-md-6 gi-col'),
