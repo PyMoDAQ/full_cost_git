@@ -47,7 +47,7 @@ class RecordFilter(django_filters.FilterSet):
 class ProjectFilter(django_filters.FilterSet):
 
     project_name = django_filters.ChoiceFilter(choices=[(p.project_name, p.project_name) for p in Project.objects.all().distinct('project_name').order_by('project_name').filter(expired=False)], empty_label='All projects')
-    project_pi = django_filters.ModelChoiceFilter(queryset=User.objects.all().filter(user_last_name__in=[p.project_pi.user_last_name for p in Project.objects.all()]),
+    project_pi = django_filters.ModelChoiceFilter(queryset=User.objects.all().filter(user_last_name__in=[p.project_pi.user_last_name for p in Project.objects.all() if p.project_pi is not None]),
                                                empty_label='All PIs')
     class Meta:
         model = Project
