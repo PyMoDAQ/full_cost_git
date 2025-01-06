@@ -1,25 +1,27 @@
 import os
 import codecs
 import csv
-from full_cost.utils.ldap import LDAP
+from full_cost.full_cost.utils.ldap import LDAP
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "full_cost.settings")
 
 import django
 django.setup()
-from lab.models import Project, User, Group, Price, Gestionnaire
+from full_cost.lab.models import Project, User, Group, Price, Gestionnaire
 
-gest = [dict(last_name='Trupin', first_name='Mireille', email='mireille.trupin@cemes.fr', groups=['NEO', 'MEM', 'M3', 'I3EM']),
+gest = [dict(last_name='Trupin', first_name='Mireille', email='mireille.trupin@cemes.fr', groups=[]),
         dict(last_name='Rougale', first_name='Muriel', email='muriel.rougalle@cemes.fr', groups=[]),
-        dict(last_name='Melendo', first_name='Rose', email='rose-marie.melendo@cemes.fr', groups=['PPM', 'SINANO']),
-        dict(last_name='Vidal', first_name='Clémence', email='clemence.vidal@cemes.fr', groups=['GNS'])]
+        dict(last_name='Melendo', first_name='Rose', email='rose-marie.melendo@cemes.fr', groups=[]),
+        dict(last_name='Cardeilhac', first_name='Frédérique', email='frederique.cardeilhac@cemes.fr', groups=[]),
+        dict(last_name='Viala', first_name='Christine', email='christine.viala@cemes.fr',
+             groups=['NEO', 'MEM', 'M3', 'I3EM', 'PPM', 'SINANO', 'GNS']),
+        ]
 
 def populate_gestionnaire():
     for g in gest:
         gg = Gestionnaire(last_name=g['last_name'], first_name=g['first_name'], email=g['email'])
         gg.save()
         print(gg)
-
 
 
 def populate_project():
@@ -67,8 +69,6 @@ def get_group(user):
     return lgroup
 
 
-
-
 def populate_groups():
     groups = ['Neo', 'M3', 'GNS', 'I3EM', 'PPM', 'SiNano', 'MEM', 'Service']
     for g in groups:
@@ -78,10 +78,8 @@ def populate_groups():
             print(g)
 
 
-
-
 def populate_osp_experiments():
-    from osp.models import Experiment, sub_billings
+    from full_cost.osp.models import Experiment, sub_billings
 
     osp_experiments = [['Xplora', sub_billings[0][0]],
                        ['T64000', sub_billings[0][0]],
@@ -101,7 +99,7 @@ def populate_osp_experiments():
         print(e)
 
 def populate_mphys_experiments():
-    from mphys.models import Experiment, sub_billings
+    from full_cost.mphys.models import Experiment, sub_billings
     exps = ['ATD/ATG', 'Adsorption Gaz', 'Titrimétrie','DLS', 'Zetamétrie',
     'Granulométrie Laser', 'Réfractométrie', 'Spectrofluorométrie',
     'Sonde Puissance', 'Préparation Echantillon (A121)', 'Pycnométrie',
@@ -122,7 +120,7 @@ def populate_mphys_experiments():
         print(e)
 
 def populate_chem_experiments():
-    from chem.models import Experiment, sub_billings
+    from full_cost.chem.models import Experiment, sub_billings
 
     chem_experiments = [['A103', sub_billings[0][0]],
                        ['A105', sub_billings[0][0]],
@@ -143,7 +141,7 @@ def populate_chem_experiments():
         print(e)
 
 def populate_fab_experiments():
-    from fab.models import Experiment, sub_billings
+    from full_cost.fab.models import Experiment, sub_billings
     CR_exps = ['Laser lithography', 'Photolithography', 'Physical Vapor Deposition - sputtering',
     'Physical Vapor Deposition - ebeam', 'Plasma etching - RIE', 'Ion beam etching',
     'Chemistry (wet etching, surface treatments)', 'Electrical Characterizations', 'Mechanical profilometer']
@@ -161,7 +159,7 @@ def populate_fab_experiments():
         print(e)
 
 def populate_imag_experiments():
-    from imag.models import Experiment, sub_billings
+    from full_cost.imag.models import Experiment, sub_billings
 
     imag_experiments = [['LT-UHV', sub_billings[0][0]],
                        ['DUF RT', sub_billings[0][0]],
@@ -182,15 +180,15 @@ def set_prices(prices, entity):
         billing.save()
         print(billing)
 
-def populate_prices():
 
+def populate_prices():
     for p in Price.objects.all():
         p.delete()
 
     ### SPECTRO entity
     entity = 'SPECTRO'
-    prices = [ ['T1', 653.22, 'SPEC'],
-                ['T3', 276.31, 'SPEC'],
+    prices = [['T1', 653.22, 'SPEC'],
+              ['T3', 276.31, 'SPEC'],
               ['T3ANR', 48.72, 'SPEC'],
               ]
     set_prices(prices, entity)
@@ -324,7 +322,6 @@ def populate_prices():
               ]
     set_prices(prices, entity)
 
-
     ### MECA entity
     entity = 'MECA'
     prices = [['T1', 515.84, 'MECA'],
@@ -334,32 +331,32 @@ def populate_prices():
     set_prices(prices, entity)
 
 
-
 def populate_fib_experiments():
-    from fib.models import Experiment, sub_billings, fibs
+    from full_cost.fib.models import Experiment, sub_billings, fibs
 
-    fib_experiments = [['TEM Preparation', sub_billings[0][0],fibs[0][0]],
-                       ['FIB', sub_billings[0][0],fibs[0][0]],
-                       ['SEM', sub_billings[1][0],fibs[0][0]],
-                       ['EDS', sub_billings[1][0],fibs[0][0]],
-                       ['EBSD', sub_billings[1][0],fibs[0][0]],
-                       ['SEM', sub_billings[1][0],fibs[1][0]],
-                       ['Lithography', sub_billings[1][0],fibs[1][0]],
-                       ['FIB', sub_billings[2][0],fibs[1][0]],]
+    fib_experiments = [['TEM Preparation', sub_billings[0][0], fibs[0][0]],
+                       ['FIB', sub_billings[0][0], fibs[0][0]],
+                       ['SEM', sub_billings[1][0], fibs[0][0]],
+                       ['EDS', sub_billings[1][0], fibs[0][0]],
+                       ['EBSD', sub_billings[1][0], fibs[0][0]],
+                       ['SEM', sub_billings[1][0], fibs[1][0]],
+                       ['Lithography', sub_billings[1][0], fibs[1][0]],
+                       ['FIB', sub_billings[2][0], fibs[1][0]], ]
 
     for e in fib_experiments:
         exp = Experiment(experiment=e[0], exp_type=e[1], fib_name=e[2])
         exp.save()
         print(e)
 
+
 def populate_engi_experiments():
-    from engi.models import Experiment, sub_billings
-    from lab.models import User
+    from full_cost.engi.models import Experiment, sub_billings
+    from full_cost.lab.models import User
     elec_people = ['pertel', 'Lasfar']
     meca_people = ['Abeilhou', 'Auriol', 'Gatti']
 
     engi_experiments = [(User.objects.get(user_last_name__iexact=p), sub_billings[1][0],) for p in elec_people]
-    engi_experiments.extend([(User.objects.get(user_last_name__iexact=p), sub_billings[0][0], ) for p in meca_people])
+    engi_experiments.extend([(User.objects.get(user_last_name__iexact=p), sub_billings[0][0],) for p in meca_people])
 
     for e in engi_experiments:
         exp = Experiment(experiment=e[0], exp_type=e[1])
@@ -367,7 +364,7 @@ def populate_engi_experiments():
         print(e)
 
 def populate_prepa_experiments():
-    from prepa.models import Experiment, sub_billings
+    from full_cost.prepa.models import Experiment, sub_billings
 
     prep_experiments = [['PIPS', sub_billings[0][0]],
                        ['Tripod', sub_billings[0][0]],
@@ -383,7 +380,7 @@ def populate_prepa_experiments():
         print(e)
 
 def populate_met_experiments():
-    from met.models import Experiment, sub_billings
+    from full_cost.met.models import Experiment, sub_billings
 
     prep_experiments = [['JEOL', sub_billings[0][0]],
                        ['CM20 FEG', sub_billings[0][0]],

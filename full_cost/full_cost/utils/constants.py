@@ -1,3 +1,6 @@
+from enum import StrEnum
+from dataclasses import dataclass
+
 """
 CEMES organisation
 People enter their working units per activity => one database per activity
@@ -5,31 +8,97 @@ Admins make an invoice per facturation => one bill use entries possibly from var
 """
 CNRS_PERCENTAGE = 6
 
-ACTIVITIES ={'osp': {'activity_short': 'osp', 'activity_long': 'Optical Spectrocopy Platform',
-                                            'sub_billings': [('SPEC','Optical Spectroscopy'),
-                                                             ('SOFT','Soft Matter'),],
-                     'related_entities': {'SPEC': 'SPECTRO', 'PREPF': 'PREPA'}},
 
-             'met': {'activity_short': 'met', 'activity_long': 'Transmission Electron Microscopy Platform',
-                     'sub_billings': [('METC','Conventionnal TEM'), ('META', 'Advanced TEM')],
-                     'related_entities': {'META': 'TEM', 'METC': 'TEM'}},
+class PricesCategories(StrEnum):
+    T1 = 'Private Prices'
+    T2 ='Academic Prices'
+    T3 = 'Academic international or Private'
+    T3ANR = 'Academic National'
 
-             'prepa': {'activity_short': 'prepa', 'activity_long': 'Sample Preparation Service',
-                                            'sub_billings': [('PREPC','Conventionnal Preparation'),
-                                                            ('FIBp','FIB preparation')],
+
+@dataclass()
+class Entity:
+    """ A class describing "something" related to a price in the full cost project"""
+    name: str
+    short: str
+
+
+class Entities(StrEnum):
+    MET_C = 'Conventionnal TEM'
+    MET_A = 'Advanced TEM'
+
+    PREP_MET_MEB = 'Preparation for MET and MEB'
+
+    FIB_MEB = 'FIB Preparation and MEB'
+
+    SPEC = 'Optical Spectroscopy'
+    MAG = 'Magnetic Properties'
+
+    MEBA = 'Advanced MEB'
+
+    MATC = 'Material Caracterisation'
+
+    UHVI = 'UHV Imagery'
+    DUFG = 'Growth DUF'
+    LT4 = 'LT-UHV 4 tips'
+    NEARF ='Near-field microscopy'
+
+    CLEANR = 'Clean Room Processes'
+    GROWTH = 'Growth'
+
+    IMPLANT = 'Ionic Implantation'
+
+    MECA = 'Mechanic Service'
+    ELEC = 'Electronic Service'
+
+
+entities = ()
+
+class OSM(StrEnum):
+    activity_short = 'osm'
+    activity_long = 'Optical Spectroscopy and Magnetism'
+
+
+
+ACTIVITIES ={OSM.activity_short: {'activity_short': OSM.activity_short.value,
+                     'activity_long': OSM.activity_long.value,
+                     'sub_billings': [('SPEC','Optical Spectroscopy'),
+                                      ],
+                     'related_entities': {'SPEC': 'SPECTRO',
+                                          'PREPF': 'PREPA'}},
+
+             'met': {'activity_short': 'met',
+                     'activity_long': 'Transmission Electron Microscopy Platform',
+                     'sub_billings': [('METC','Conventionnal TEM'),
+                                      ('META', 'Advanced TEM')],
+                     'related_entities': {'META': 'TEM',
+                                          'METC': 'TEM'}},
+
+             'prepa': {'activity_short': 'prepa',
+                       'activity_long': 'Sample Preparation Service',
+                       'sub_billings': [('PREPC','Conventionnal Preparation'),
+                                        ('FIBp','FIB preparation')],
                      'related_entities': {'PREPC': 'PREPA',}},
 
-             'fib': {'activity_short': 'fib', 'activity_long': 'Focused Ion Beam', 'sub_billings':
-                                                    [('FIBp','FIB preparation'),
-                                                     ('MEBA','Advanced MEB'),
-                                                     ('FIBc','FIB Clean Room'),],
+             'fib': {'activity_short': 'fib',
+                     'activity_long': 'Focused Ion Beam',
+                     'sub_billings':
+                         [('FIBp','FIB preparation'),
+                          ('MEBA','Advanced MEB'),
+                          ('FIBc','FIB Clean Room'),],
                      'related_entities': {'FIBp': 'PREPA', 'MEBA': 'MEBA', 'FIBc': 'FIBCR', }},
 
-             'mphys': {'activity_short': 'mphys', 'activity_long': 'PS2I','sub_billings':
-                                                [('MAG', 'Magnetic Measurement'),
-                                                 ('MATC', 'Material Caracterisation')],
-                    'related_entities': {'MAG': 'MAGNETIC', 'MATC': 'MATCARAC'}},
-            'chem':{'activity_short': 'chem', 'activity_long': 'Chemistry','sub_billings': [('CHEM', 'Chemistry'),],
+             'mphys': {'activity_short': 'mphys',
+                       'activity_long': 'PS2I',
+                       'sub_billings':
+                           [('MAG', 'Magnetic Measurement'),
+                            ('MATC', 'Material Caracterisation')],
+                    'related_entities':
+                           {'MAG': 'MAGNETIC',
+                            'MATC': 'MATCARAC'}},
+            'chem':{'activity_short': 'chem',
+                    'activity_long': 'Chemistry',
+                    'sub_billings': [('CHEM', 'Chemistry'),],
                      'related_entities': {'CHEM': 'CHEM'}},
 
             'imag': {'activity_short': 'imag', 'activity_long': 'STM/AFM - UHV Growth',
@@ -37,12 +106,20 @@ ACTIVITIES ={'osp': {'activity_short': 'osp', 'activity_long': 'Optical Spectroc
                                       ('DUFG', 'Growth DUF'),
                                       ('LT4', 'LT-UHV 4 tips'),
                                       ('NEARF', 'Near-field microscopy'),],
-                      'related_entities': {'UHVI': 'UHVI', 'LT4': 'LT4', 'NEARF':'NEARF'}},
-            'fab': {'activity_short': 'fab', 'activity_long': 'Nanomaterial Fabrication',
-                            'sub_billings': [('CLEANR', 'Clean Room Processes'),
-                                             ('GROWTH', 'Growth'),],
-                      'related_entities': {'CLEANR': 'CLEANR', 'DUFG': 'DUFG',
-                                           'GROWTH': 'GROWTHIMP', 'IMPLANT': 'GROWTHIMP'}},
+                      'related_entities':
+                         {'UHVI': 'UHVI',
+                          'LT4': 'LT4',
+                          'NEARF':'NEARF'}},
+            'fab': {'activity_short': 'fab',
+                    'activity_long': 'Nanomaterial Fabrication',
+                    'sub_billings': [
+                        ('CLEANR', 'Clean Room Processes'),
+                        ('GROWTH', 'Growth'),],
+                      'related_entities':
+                        {'CLEANR': 'CLEANR',
+                         'DUFG': 'DUFG',
+                         'GROWTH': 'GROWTHIMP',
+                         'IMPLANT': 'GROWTHIMP'}},
              'implant': {'activity_short': 'implant', 'activity_long': 'Implantation and growth',
                      'sub_billings': [('GROWTH', 'Growth'),
                                       ('IMPLANT', 'Ionic Implantation')],
@@ -54,41 +131,80 @@ ACTIVITIES ={'osp': {'activity_short': 'osp', 'activity_long': 'Optical Spectroc
              }
 activities_choices = [(k, ACTIVITIES[k]['activity_long'],) for k in ACTIVITIES.keys()]
 
-BILLINGS = [dict(entity=('SPECTRO', 'Optical Spectroscopy'), activities=('osp',),
-                            related_subbillings=[dict(short='SPEC', long='Optical Spectroscopy')]),
-                dict(entity=('TEM', 'Electronic Microscopy'), activities=('met',),
-                     related_subbillings=[dict(short='META', long='Advanced TEM'),dict(short='METC', long='Conventionnal TEM')],),
-                dict(entity=('PREPA', 'Sample Preparation'), activities=('prepa', 'fib'),
-                     related_subbillings=[dict(short='PREPC', long='Conventionnal Preparation'), dict(short='FIBp', long='FIB preparation')],),
-                dict(entity=('MEBA', 'Advanced MEB'), activities=('fib',),
-                     related_subbillings=[dict(short='MEBA', long='Advanced MEB')],),
-                dict(entity=('FIBCR', 'FIB Clean Room'), activities=('fib',),
-                     related_subbillings=[dict(short='FIBc', long='FIB Clean Room')],),
-                dict(entity=('SOFT', 'Soft Matter'), activities=('osp',),
-                     related_subbillings=[dict(short='SOFT', long='Soft Matter')],),
-                dict(entity=('MATCARAC', 'PS2I'), activities=('mphys',),
-                      related_subbillings=[dict(short='MATC', long='Material Caracterisation')],),
-                dict(entity=('MAGNETIC', 'Magnetic Measurement'), activities=('mphys',),
-                      related_subbillings=[dict(short='MAG', long='Magnetic Measurement')],),
-                dict(entity=('CHEM', 'Chemistry'), activities=('chem',),
-                    related_subbillings=[dict(short='CHEM', long='Chemistry')],),
-                dict(entity=('CLEANR', 'Clean Room Processes'), activities=('fab',),
-                      related_subbillings=[dict(short='CLEANR', long='Clean Room Processes')],),
-                dict(entity=('UHVI', 'UHV Imagery'), activities=('imag',),
-                      related_subbillings=[dict(short='UHVI', long='UHV Imagery')],),
-                dict(entity=('LT4', 'LT-UHV 4 tips'), activities=('imag',),
-                      related_subbillings=[dict(short='LT4', long='LT-UHV 4 tips')],),
-                dict(entity=('DUFG', 'Growth DUF'), activities=('imag',),
-                      related_subbillings=[dict(short='DUFG', long='Growth DUF')],),
-                dict(entity=('NEARF', 'Near-field microscopy'), activities=('imag',),
-                      related_subbillings=[dict(short='NEARF', long='Near-field microscopy')],),
-                dict(entity=('GROWTHIMP', 'Growth and Implantation'), activities=('implant',),
-                      related_subbillings=[dict(short='GROWTH', long='Growth'),
-                                           dict(short='IMPLANT', long='Ionic Implantation')],),
-                dict(entity=('MECA', 'Mechanic Service'), activities=('engi',),
-                     related_subbillings=[dict(short='MECA', long='Mechanic Service')], ),
-                dict(entity=('ELEC', 'Electronic Service'), activities=('engi',),
-                     related_subbillings=[dict(short='ELEC', long='Electronic Service')], ),
+BILLINGS = [dict(entity=('SPECTRO', 'Optical Spectroscopy'),
+                 activities=('osm',),
+                 related_subbillings=[dict(short='SPEC',
+                                           long='Optical Spectroscopy')]),
+            dict(entity=('TEM', 'Electronic Microscopy'),
+                 activities=('met',),
+                 related_subbillings=[dict(short='META',
+                                           long='Advanced TEM'),
+                                      dict(short='METC',
+                                           long='Conventionnal TEM')],),
+                dict(entity=('PREPA', 'Sample Preparation'),
+                     activities=('prepa', 'fib'),
+                     related_subbillings=[dict(short='PREPC',
+                                               long='Conventionnal Preparation'),
+                                          dict(short='FIBp',
+                                               long='FIB preparation')],),
+                dict(entity=('MEBA', 'Advanced MEB'),
+                     activities=('fib',),
+                     related_subbillings=[dict(short='MEBA',
+                                               long='Advanced MEB')],),
+                dict(entity=('FIBCR', 'FIB Clean Room'),
+                     activities=('fib',),
+                     related_subbillings=[dict(short='FIBc',
+                                               long='FIB Clean Room')],),
+                dict(entity=('SOFT', 'Soft Matter'),
+                     activities=('osm',),
+                     related_subbillings=[dict(short='SOFT',
+                                               long='Soft Matter')],),
+                dict(entity=('MATCARAC', 'PS2I'),
+                     activities=('mphys',),
+                      related_subbillings=[dict(short='MATC',
+                                                long='Material Caracterisation')],),
+                dict(entity=('MAGNETIC', 'Magnetic Measurement'),
+                     activities=('mphys',),
+                      related_subbillings=[dict(short='MAG',
+                                                long='Magnetic Measurement')],),
+                dict(entity=('CHEM', 'Chemistry'),
+                     activities=('chem',),
+                     related_subbillings=[dict(short='CHEM',
+                                               long='Chemistry')],),
+                dict(entity=('CLEANR', 'Clean Room Processes'),
+                     activities=('fab',),
+                      related_subbillings=[dict(short='CLEANR',
+                                                long='Clean Room Processes')],),
+                dict(entity=('UHVI', 'UHV Imagery'),
+                     activities=('imag',),
+                      related_subbillings=[dict(short='UHVI',
+                                                long='UHV Imagery')],),
+                dict(entity=('LT4', 'LT-UHV 4 tips'),
+                     activities=('imag',),
+                      related_subbillings=[dict(short='LT4',
+                                                long='LT-UHV 4 tips')],),
+                dict(entity=('DUFG', 'Growth DUF'),
+                     activities=('imag',),
+                     related_subbillings=[dict(short='DUFG',
+                                               long='Growth DUF')],),
+                dict(entity=('NEARF', 'Near-field microscopy'),
+                     activities=('imag',),
+                      related_subbillings=[dict(short='NEARF',
+                                                long='Near-field microscopy')],),
+                dict(entity=('GROWTHIMP', 'Growth and Implantation'),
+                     activities=('implant',),
+                      related_subbillings=[dict(short='GROWTH',
+                                                long='Growth'),
+                                           dict(short='IMPLANT',
+                                                long='Ionic Implantation')],),
+                dict(entity=('MECA', 'Mechanic Service'),
+                     activities=('engi',),
+                     related_subbillings=[dict(short='MECA',
+                                               long='Mechanic Service')], ),
+                dict(entity=('ELEC', 'Electronic Service'),
+                     activities=('engi',),
+                     related_subbillings=[dict(short='ELEC',
+                                               long='Electronic Service')], ),
                 ]
 
 def get_activities_from_entity(entity):

@@ -5,21 +5,13 @@ from django.contrib.postgres.fields import ArrayField
 from django.utils.timezone import now
 from simple_history.models import HistoricalRecords
 import datetime
-from full_cost.utils.constants import activities_choices, get_billing_entities_as_list
+from full_cost.full_cost.utils.constants import (activities_choices, get_billing_entities_as_list,
+                                                 PricesCategories)
 
 activity_short = Path(__file__).parts[-2]
 
 # Create your models here.
-T1 = 'T1'
-T2 = 'T2'
-T3 = 'T3'
-T3ANR = 'T3ANR'
 
-prices = [(T1, 'Private Prices'),
-          (T2, 'Academic Prices'),
-          (T3, 'Academic international or Private'),
-          (T3ANR, 'Academic National'),
-          ]
 
 class Gestionnaire(models.Model):
     first_name = models.CharField(max_length=200, default=None)
@@ -31,6 +23,7 @@ class Gestionnaire(models.Model):
     def __str__(self):
         return '{:s} {:s}'.format(self.last_name, self.first_name)
 
+
 class Group(models.Model):
     group = models.CharField(max_length=200)
     description = models.CharField(max_length=200, default='')
@@ -41,6 +34,7 @@ class Group(models.Model):
 
     def __str__(self):
         return self.group
+
 
 class User(models.Model):
     user_last_name = models.CharField(max_length=200)
@@ -55,6 +49,7 @@ class User(models.Model):
     def __str__(self):
         return f'{self.user_last_name} {self.user_first_name}'
 
+
 class Project(models.Model):
 
     project_name = models.CharField(max_length=200)
@@ -62,7 +57,6 @@ class Project(models.Model):
     is_cnrs = models.BooleanField(default=True) # project managed by CNRS (True) or other institutions (False)
     is_academic = models.BooleanField(default=True) #for academic clients (CNRS, Fac, INSA, others) for private clients or prestations (False)
     is_national = models.BooleanField(default=True) #for ANR or NEXT (True)
-    ##pricing = models.CharField(max_length=200, choices=prices, default=T3ANR)
     expired = models.BooleanField(default=False)
     expired_date = models.DateField(default=now)
     amount_left = models.FloatField(default=0.0)
@@ -74,18 +68,20 @@ class Project(models.Model):
     def __str__(self):
         return f'{self.project_name} / {self.project_pi}'
 
+
 class Price(models.Model):
-    price_category = models.CharField(max_length=200, choices=prices, default=T3ANR)
+    price_category = models.CharField(max_length=200,
+                                      choices={pcat.name: pcat.value for pcat in PricesCategories},
+                                      default=PricesCategories.T3ANR)
     price = models.FloatField(default=0)
     price_name = models.CharField(max_length=200, default='')
-    price_entity = models.CharField(max_length=200, choices=get_billing_entities_as_list(), default=get_billing_entities_as_list()[0])
+    price_entity = models.CharField(max_length=200, choices=get_billing_entities_as_list(),
+                                    default=get_billing_entities_as_list()[0])
     def __str__(self):
         return f'{self.price_entity}: {self.price_name}/{self.price_category}'
 
     class Meta:
         ordering = ['price_entity', 'price_name', 'price_category']
-
-
 
 
 class Extraction(models.Model):
@@ -96,13 +92,15 @@ class Extraction(models.Model):
     creation_id = models.IntegerField(default=-1)
     factured = models.BooleanField(default=False)
     amount = models.FloatField(default=0.0)
-    billing = models.CharField(max_length=200, choices=get_billing_entities_as_list(), default=get_billing_entities_as_list()[0])
+    billing = models.CharField(max_length=200, choices=get_billing_entities_as_list(),
+                               default=get_billing_entities_as_list()[0])
     submitted = models.BooleanField(default=False)
     class Meta:
         ordering = ['creation_date', 'creation_id']
 
     def __str__(self):
-        return f"Extraction {self.billing}-{self.creation_date.strftime('%y')}-{self.creation_id:03d} for {self.project}"
+        return (f"Extraction {self.billing}-{self.creation_date.strftime('%y')}-"
+                f"{self.creation_id:03d} for {self.project}")
 
 class Record(models.Model):
     submitted = models.DateTimeField(default=now)
@@ -120,7 +118,8 @@ class Record(models.Model):
                                 )
     remark = models.TextField()
     wu = models.FloatField(default=0, validators=[MinValueValidator(0)], blank=True)
-    billing = models.CharField(max_length=200, choices=get_billing_entities_as_list(), default=get_billing_entities_as_list()[0][0])
+    billing = models.CharField(max_length=200, choices=get_billing_entities_as_list(),
+                               default=get_billing_entities_as_list()[0][0])
 
 
     class Meta:

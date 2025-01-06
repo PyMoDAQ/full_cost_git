@@ -1,9 +1,9 @@
 from pathlib import Path
-from full_cost.utils.constants import ACTIVITIES
+from full_cost.full_cost.utils.constants import ACTIVITIES
 from django.db import models
-from lab.models import Record as LRecord
-from lab.models import Extraction
-from lab.models import Record2Range, RecordDate, RecordNights
+from full_cost.lab.models import Record as LRecord
+from full_cost.lab.models import Extraction
+from full_cost.lab.models import Record2Range, RecordDate, RecordNights
 from simple_history.models import HistoricalRecords
 
 activity_short = Path(__file__).parts[-2]
