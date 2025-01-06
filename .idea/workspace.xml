@@ -8,6 +8,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/full_cost_git.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/full_cost_git.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/full_cost/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/full_cost/utils/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/full_cost/utils/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/lab/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/lab/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/osp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/osp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full_cost/staticfiles/populate_database_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/full_cost/staticfiles/populate_database_initial.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +32,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="1WUnR2QIfPAmvaAkwnCuJ0RIDcK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -42,8 +47,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/weber/Labo/Programmes Python/Git_others/full_cost_git"
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "full__cost__2",
+    "last_opened_file_path": "C:/Users/weber/Labo/ProgrammesPython/Git_others/full_cost_git",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -62,6 +69,7 @@
   <component name="RunManager" selected="Python.runserver">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="full_cost_git" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -83,6 +91,7 @@
     </configuration>
     <configuration name="runserver" type="PythonConfigurationType" factoryName="Python">
       <module name="full_cost_git" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -111,6 +120,13 @@
         <item itemvalue="Python.manage" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
