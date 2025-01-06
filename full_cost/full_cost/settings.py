@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'full_cost.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'full_cost',
+        'NAME': 'full_cost_2',
         'USER': 'postgres',
         'PASSWORD': '',
         'HOST': '127.0.0.1',

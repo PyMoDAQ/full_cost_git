@@ -76,7 +76,17 @@ setup(
     install_requires = [
         'numpy',
         'django',
-
+        'psycopg2',
+        'python-ldap',
+        'django-auth-ldap',
+        'django-tables2',
+        'django-filter',
+        'bootstrap4',
+        'django-crispy-forms',
+        'django-simple-history',
+        'django-post_office',
+        'openpyxl',
+        'tablib',
         ],
     include_package_data=True,
     **setupOpts
