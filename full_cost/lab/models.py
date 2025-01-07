@@ -6,7 +6,7 @@ from django.utils.timezone import now
 from simple_history.models import HistoricalRecords
 import datetime
 from full_cost.full_cost.utils.constants import (activities_choices, get_billing_entities_as_list,
-                                                 PricesCategories)
+                                                 PriceCategory)
 
 activity_short = Path(__file__).parts[-2]
 
@@ -71,8 +71,8 @@ class Project(models.Model):
 
 class Price(models.Model):
     price_category = models.CharField(max_length=200,
-                                      choices={pcat.name: pcat.value for pcat in PricesCategories},
-                                      default=PricesCategories.T3ANR)
+                                      choices={pcat.name: pcat.value for pcat in PriceCategory},
+                                      default=PriceCategory.T1)
     price = models.FloatField(default=0)
     price_name = models.CharField(max_length=200, default='')
     price_entity = models.CharField(max_length=200, choices=get_billing_entities_as_list(),

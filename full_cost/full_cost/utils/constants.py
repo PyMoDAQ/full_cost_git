@@ -1,3 +1,4 @@
+from typing import Iterable
 from enum import StrEnum
 from dataclasses import dataclass
 
@@ -8,12 +9,25 @@ Admins make an invoice per facturation => one bill use entries possibly from var
 """
 CNRS_PERCENTAGE = 6
 
+class BaseEnum(StrEnum):
 
-class PricesCategories(StrEnum):
-    T1 = 'Private Prices'
-    T2 ='Academic Prices'
-    T3 = 'Academic international or Private'
-    T3ANR = 'Academic National'
+    @classmethod
+    def names(cls):
+        return (elt.name for elt in cls)
+
+    @classmethod
+    def values(cls):
+        return (elt.value for elt in cls)
+
+    @classmethod
+    def to_dict(cls):
+        return {elt.name: elt.value for elt in cls}
+
+
+class PriceCategory(BaseEnum):
+    T1 = 'CNRS Interne'
+    T2 ='CNRS Externe'
+    T3 = 'Private'
 
 
 @dataclass()
@@ -21,46 +35,154 @@ class Entity:
     """ A class describing "something" related to a price in the full cost project"""
     name: str
     short: str
+    prices: dict[PriceCategory, float]
 
 
-class Entities(StrEnum):
+class EntityCategory(BaseEnum):
     MET_C = 'Conventionnal TEM'
     MET_A = 'Advanced TEM'
 
-    PREP_MET_MEB = 'Preparation for MET and MEB'
+    PREPA = 'Preparation for MET and MEB'
+    PREPA_SOFT = 'Soft Matter Preparation'
 
     FIB_MEB = 'FIB Preparation and MEB'
 
-    SPEC = 'Optical Spectroscopy'
-    MAG = 'Magnetic Properties'
+
+    SPECTRO = 'Optical Spectroscopy'
+    SPECTRO_CHEMISTRY = 'Optical Spectroscopy for Chemistry'
+    MAGNET = 'Magnetic Properties'
 
     MEBA = 'Advanced MEB'
 
     MATC = 'Material Caracterisation'
 
+    CLEANR = 'Clean Room Processes'
+    NEARF = 'Near-field microscopy'
+    FIB_LITHO = 'Lithography using the ZEISS'
+
     UHVI = 'UHV Imagery'
     DUFG = 'Growth DUF'
     LT4 = 'LT-UHV 4 tips'
-    NEARF ='Near-field microscopy'
 
-    CLEANR = 'Clean Room Processes'
     GROWTH = 'Growth'
-
     IMPLANT = 'Ionic Implantation'
 
     MECA = 'Mechanic Service'
     ELEC = 'Electronic Service'
 
-
-entities = ()
-
-class OSM(StrEnum):
-    activity_short = 'osm'
-    activity_long = 'Optical Spectroscopy and Magnetism'
+    def to_entity(self, prices: dict[PriceCategory, float]) -> Entity:
+        return Entity(self.name, self.value, prices)
 
 
+entities = {
+    EntityCategory.MET_C:
+        EntityCategory.MET_C.to_entity(
+            {PriceCategory.T1: 247.,
+             PriceCategory.T2: 1066.,
+             PriceCategory.T3: 1333.,}
+        ),
+    EntityCategory.MET_A:
+        EntityCategory.MET_A.to_entity(
+            {PriceCategory.T1: 81.,
+             PriceCategory.T2: 976.,
+             PriceCategory.T3: 1121., }
+        ),
+    EntityCategory.PREPA:
+        EntityCategory.PREPA.to_entity(
+            {PriceCategory.T1: 119.,
+             PriceCategory.T2: 1366.,
+             PriceCategory.T3: 1708., }
+        ),
+    EntityCategory.PREPA_SOFT:
+        EntityCategory.PREPA_SOFT.to_entity(
+            {PriceCategory.T1: 119.,
+             PriceCategory.T2: 1366.,
+             PriceCategory.T3: 1708., }
+        ),
+    EntityCategory.FIB_MEB:
+        EntityCategory.FIB_MEB.to_entity(
+            {PriceCategory.T1: 202.,
+             PriceCategory.T2: 341.,
+             PriceCategory.T3: 426., }
+        ),
+    EntityCategory.SPECTRO:
+        EntityCategory.SPECTRO.to_entity(
+            {PriceCategory.T1: 130.,
+             PriceCategory.T2: 419.,
+             PriceCategory.T3: 524., }
+        ),
+    EntityCategory.SPECTRO_CHEMISTRY:
+        EntityCategory.SPECTRO_CHEMISTRY.to_entity(
+            {PriceCategory.T1: 130.,
+             PriceCategory.T2: 419.,
+             PriceCategory.T3: 524., }
+        ),
+    EntityCategory.MAGNET:
+        EntityCategory.MAGNET.to_entity(
+            {PriceCategory.T1: 130.,
+             PriceCategory.T2: 419.,
+             PriceCategory.T3: 524., }
+        ),
+    EntityCategory.MATC:
+        EntityCategory.MATC.to_entity(
+            {PriceCategory.T1: 66.,
+             PriceCategory.T2: 358.,
+             PriceCategory.T3: 448., }
+        ),
+    EntityCategory.CLEANR:
+        EntityCategory.CLEANR.to_entity(
+            {PriceCategory.T1: 281.,
+             PriceCategory.T2: 652.,
+             PriceCategory.T3: 815., }
+        ),
+    EntityCategory.NEARF:
+        EntityCategory.NEARF.to_entity(
+            {PriceCategory.T1: 281.,
+             PriceCategory.T2: 652.,
+             PriceCategory.T3: 815., }
+        ),
+    EntityCategory.FIB_LITHO:
+        EntityCategory.CLEANR.to_entity(
+            {PriceCategory.T1: 281.,
+             PriceCategory.T2: 652.,
+             PriceCategory.T3: 815., }
+        ),
 
-ACTIVITIES ={OSM.activity_short: {'activity_short': OSM.activity_short.value,
+}
+
+
+
+@dataclass()
+class Activity:
+    activity_short: str
+    activity_long: str
+    entities: Iterable[Entity]
+
+
+class ActivityCategory(BaseEnum):
+
+    MET = 'Transmission Electron Microscopy Platform'
+    PREPA = 'Sample Preparation Service'
+    FIB_MEB = 'Focused Ion Beam and MEB'
+    OSM = 'Optical Spectroscopy and Magnetism'
+    CARAC = 'Material Characterisation'
+    CLEANR = 'Clean Room'
+    CHEM = 'Chemistry'
+    GROWTH_IMP = 'Growth and Implantation'
+    STM_AFM = 'UHV Imagery'
+    ENGINEERING = 'Engineering'
+
+ACTIVITIES = (
+    Activity(ActivityCategory.MET.name,
+             ActivityCategory.MET.value,
+             entities=(EntityCategory.MET_C.to_entity(),
+                       EntityCategory.MET_A.to_entity(),
+                       ),
+             ),
+)
+
+
+ACTIVITIES = {OSM.activity_short: {'activity_short': OSM.activity_short.value,
                      'activity_long': OSM.activity_long.value,
                      'sub_billings': [('SPEC','Optical Spectroscopy'),
                                       ],
