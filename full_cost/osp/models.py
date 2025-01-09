@@ -1,5 +1,5 @@
 from pathlib import Path
-from full_cost.full_cost.utils.constants import ACTIVITIES
+from full_cost.full_cost.utils.activities import ACTIVITIES
 from django.db import models
 from full_cost.lab.models import Record as LRecord
 from full_cost.lab.models import Extraction
