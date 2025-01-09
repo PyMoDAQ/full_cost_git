@@ -15,21 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-#from lab.views import Index
+from django.contrib.auth import views as auth_views
 
-urlpatterns = []
-#     path('', Index.as_view(), name='index'),
-#     path('lab/', include('lab.urls')),
-#     path('osp/', include('osp.urls')),
-#     path('met/', include('met.urls')),
-#     path('prepa/', include('prepa.urls')),
-#     path('fib/', include('fib.urls')),
-#     path('mphys/', include('mphys.urls')),
-#     path('chem/', include('chem.urls')),
-#     path('imag/', include('imag.urls')),
-#     path('fab/', include('fab.urls')),
-#     path('implant/', include('implant.urls')),
-#     path('engi/', include('engi.urls')),
-#     path('admin/', admin.site.urls),
-#     path('accounts/', include('django.contrib.auth.urls')),
-# ]
+path('accounts/login/', auth_views.LoginView.as_view()),
+
+urlpatterns = [
+    path('lab/', include('lab.urls')),
+    path('osp/', include('osp.urls')),
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+]
