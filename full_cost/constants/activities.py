@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from collections.abc import Iterable
 
-from full_cost.utils.entities import Entity, ENTITIES, EntityCategory
+from full_cost.constants.entities import Entity, ENTITIES, EntityCategory
 from full_cost.utils.enum import BaseEnum
 
 

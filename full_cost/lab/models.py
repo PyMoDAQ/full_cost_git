@@ -5,8 +5,8 @@ from django.contrib.postgres.fields import ArrayField
 from django.utils.timezone import now
 from simple_history.models import HistoricalRecords
 import datetime
-from full_cost.utils.activities import activities_choices
-from full_cost.utils.entities import PriceCategory, ENTITIES, get_entities_as_list
+from full_cost.constants.activities import activities_choices
+from full_cost.constants.entities import PriceCategory, ENTITIES, get_entities_as_list
 
 activity_short = Path(__file__).parts[-2]
 

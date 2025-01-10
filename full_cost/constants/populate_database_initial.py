@@ -2,14 +2,14 @@ import os
 import codecs
 import csv
 from full_cost.utils.ldap import LDAP
-from full_cost.utils.activities import ACTIVITIES, ActivityCategory
-from full_cost.utils.entities import ENTITIES, PriceCategory
+from full_cost.constants.activities import ACTIVITIES, ActivityCategory
+from full_cost.constants.entities import ENTITIES, PriceCategory
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "full_cost.settings")
 
 import django
 django.setup()
-from lab.models import Project, User, Group, Price, Gestionnaire
+from full_cost.lab.models import Project, User, Group, Price, Gestionnaire
 
 gest = [dict(last_name='Trupin', first_name='Mireille', email='mireille.trupin@cemes.fr', groups=[]),
         dict(last_name='Rougale', first_name='Muriel', email='muriel.rougalle@cemes.fr', groups=[]),
@@ -69,15 +69,6 @@ def get_group(user):
         else:
             lgroup = g[0]
     return lgroup
-
-
-def populate_groups():
-    groups = ['Neo', 'M3', 'GNS', 'I3EM', 'PPM', 'SINano', 'MEM', 'Service']
-    for g in groups:
-        if not Group.objects.filter(group__iexact=g).exists():
-            u = Group(group=g)
-            u.save()
-            print(g)
 
 
 def populate_osm_experiments():
@@ -257,8 +248,7 @@ if __name__ == '__main__':
 
     #populate_gestionnaire()
     #populate_prices()
-    populate_groups()
-    #populate_users()
+    populate_users()
     #populate_project()
 
 
