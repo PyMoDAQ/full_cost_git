@@ -72,7 +72,7 @@ def get_group(user):
 
 
 def populate_groups():
-    groups = ['Neo', 'M3', 'GNS', 'I3EM', 'PPM', 'SiNano', 'MEM', 'Service']
+    groups = ['Neo', 'M3', 'GNS', 'I3EM', 'PPM', 'SINano', 'MEM', 'Service']
     for g in groups:
         if not Group.objects.filter(group__iexact=g).exists():
             u = Group(group=g)
@@ -254,10 +254,11 @@ if __name__ == '__main__':
     #populate_engi_experiments()
     # populate_chem_experiments()
     # populate_imag_experiments()
-    # # populate_gestionnaire()
-    populate_prices()
-    #populate_users()
 
+    #populate_gestionnaire()
+    #populate_prices()
+    populate_groups()
+    #populate_users()
     #populate_project()
 
 
